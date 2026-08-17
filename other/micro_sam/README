@@ -1,0 +1,27 @@
+# Micro-sam annotation
+
+## Installation
+
+```
+pixi install
+```
+### Do it yourself
+
+```
+pixi init
+pixi add python=3.12 micro_sam jupyterlab
+pixi add --pypi requests #for pip packages
+```
+
+## Start jupyterlab
+```
+pixi run jupyter lab
+```
+or
+```
+pixi shell
+jupyter lab
+```
+
+## Use with GPU
+

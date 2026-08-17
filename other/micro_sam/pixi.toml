@@ -1,0 +1,16 @@
+[workspace]
+authors = ["Maarten Paul <maarten.paul@gmail.com>"]
+channels = ["conda-forge"]
+name = "micro_sam"
+platforms = ["linux-64","win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+jupyterlab = ">=4.6.3,<5"
+micro_sam = ">=1.8.8,<2"
+
+[pypi-dependencies]
+requests = "*"
