@@ -7,4 +7,4 @@ Repository for the NL-BI Advanced Image Analysis course
 git clone https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026.git
 ```
 
-No git installed? Check here https://git-scm.com/install/windows
+No Python/git installed? Check out the [preparations](preparation/preparation.md) page first!

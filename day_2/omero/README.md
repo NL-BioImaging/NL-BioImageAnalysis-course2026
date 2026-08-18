@@ -19,6 +19,6 @@ uv pip install omero-py jupyterlab
 ```
 
 ### Useful documentation
-ezomero https://thejacksonlaboratory.github.io/ezomero/index.html
+ezomero documentation - https://thejacksonlaboratory.github.io/ezomero/index.html
 
 https://www.glencoesoftware.com/blog/2023/12/08/ice-binaries-for-omero.html
