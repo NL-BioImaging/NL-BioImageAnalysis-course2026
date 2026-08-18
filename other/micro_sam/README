@@ -24,4 +24,11 @@ jupyter lab
 ```
 
 ## Use with GPU
+Modify pixi.toml
 
+
+```
+platforms = [
+  { platform = "win-64", cuda = "12.8" },
+]
+```

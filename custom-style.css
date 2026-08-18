@@ -1,0 +1,137 @@
+/* Hide "Made with MyST" branding in header */
+header a[href*="mystmd.org"] {
+  display: none !important;
+}
+
+/* Alternative: hide the entire branding link container if needed */
+header .logo-text,
+header .myst-brand,
+header .myst-branding {
+  display: none !important;
+}
+
+/* Navy blue color palette based on rgb(0, 17, 88) */
+:root {
+  --navy-primary: #001158;
+  --navy-light: #0029bb;
+  --navy-lighter: #e6eaf5;
+  --navy-dark: #000b44;
+  --navy-darker: #000622;
+}
+
+/* Links */
+a {
+  color: var(--navy-primary);
+}
+
+a:hover {
+  color: var(--navy-dark);
+}
+
+/* Active navigation items */
+nav a.active,
+.toc a.active {
+  color: var(--navy-primary);
+  border-left-color: var(--navy-primary);
+}
+
+/* Navigation hover states */
+nav a:hover,
+.toc a:hover {
+  color: var(--navy-primary);
+  background-color: var(--navy-lighter);
+}
+
+/* Headers with accent */
+h1, h2, h3 {
+  color: var(--navy-darker);
+}
+
+/* Buttons and interactive elements */
+button,
+.button,
+.btn-primary {
+  background-color: var(--navy-lighter);
+  border-color: var(--navy-primary);
+  color: var(--navy-darker);
+}
+
+button:hover,
+.button:hover,
+.btn-primary:hover {
+  background-color: var(--navy-lighter);
+  border-color: var(--navy-dark);
+  color: var(--navy-darker);
+}
+
+/* Code and syntax highlighting accents */
+code {
+  background-color: var(--navy-lighter);
+}
+
+/* Admonitions with navy accent */
+.admonition.tip,
+.admonition.note {
+  border-left-color: var(--navy-primary);
+}
+
+.admonition.tip > .admonition-title,
+.admonition.note > .admonition-title {
+  background-color: var(--navy-lighter);
+  color: var(--navy-darker);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left-color: var(--navy-primary);
+}
+
+/* Table of contents active item */
+.toc-tree li.active > a {
+  color: var(--navy-primary);
+  font-weight: 600;
+}
+
+/* Search highlights */
+mark,
+.search-highlight {
+  background-color: var(--navy-lighter);
+  color: var(--navy-darker);
+}
+
+/* Focus states for accessibility */
+a:focus,
+button:focus,
+input:focus {
+  outline-color: var(--navy-primary);
+  outline-width: 2px;
+}
+
+/* Horizontal rules */
+hr {
+  border-color: var(--navy-light);
+}
+
+/* GitHub link in header */
+header a[href*="github.com"]:hover {
+  color: var(--navy-primary);
+}
+
+/* People page styling */
+.grid-item-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 1rem;
+}
+
+.grid-item-card {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.grid-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 17, 88, 0.15);
+}
