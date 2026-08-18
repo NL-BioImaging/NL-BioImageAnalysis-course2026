@@ -13,10 +13,18 @@ project:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
     - file: README
-    - title: Welcome
+    - title: Program
       children:
       - file: day_1/README
-      - title:
+        title: Day 1
+      - file: day_2/README
+        title: Day 2
+      - file: day_3/README
+        title: Day 3
+      - file: day_4/README
+        title: Day 4    
+    - title: Preparation
+      file: preparation/preparation.md    
 site:
   template: book-theme
   # options:
