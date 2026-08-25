@@ -11,7 +11,7 @@ pip install omero-py jupyterlab
 
 ```
 
-### With uv virtual environment
+### With uv virtual environment (This can go??)
 #### Windows
 ```
 uv venv --python 3.12
