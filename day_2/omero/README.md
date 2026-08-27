@@ -28,6 +28,18 @@ uv pip install zeroc-ice@https://github.com/glencoesoftware/zeroc-ice-py-linux-x
 uv pip install omero-py jupyterlab
 ```
 
+## Running Jupyter lab
+Go to this folder
+```
+cd NL-BioImageAnalysis-course2026/day_2/omero
+```
+On the command line go to the github 
+```
+conda activate nlbi26-day2-omero
+jupyter lab
+```
+Open `omero.ipynb`
+
 
 ### Useful documentation
 ezomero documentation - https://thejacksonlaboratory.github.io/ezomero/index.html
