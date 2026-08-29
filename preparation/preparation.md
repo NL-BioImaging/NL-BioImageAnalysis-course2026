@@ -1,3 +1,7 @@
+---
+authors: [mpaul, clewis]
+---
+
 # Setting up your computer
 So that we can fully utilise the time during the course, we ask that you prepare your computer before the course starts. Please follow the following steps and notify the course organisers if you get stuck. We can help, and would much rather do this prior to the course! 
 
@@ -31,7 +35,3 @@ git clone https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026
 cd NL-BioImageAnalysis-course2026
 ```
 Good luck, and we hope that you enjoy the course. If you have any questions beforehand, please feel free to ask using the course registration email.
-
-
-
-
