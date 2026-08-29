@@ -25,7 +25,7 @@ uv pip install omero-py jupyterlab
 uv venv --python 3.12
 source .venv/bin/activate
 uv pip install zeroc-ice@https://github.com/glencoesoftware/zeroc-ice-py-linux-x86_64/releases/download/20240202/zeroc_ice-3.6.5-cp312-cp312-manylinux_2_28_x86_64.whl
-uv pip install omero-py jupyterlab
+uv pip install omero-py jupyterlab ezomero matplotlib numpy
 ```
 
 ## Running Jupyter lab
@@ -44,4 +44,4 @@ Open `omero.ipynb`
 ### Useful documentation
 ezomero documentation - https://thejacksonlaboratory.github.io/ezomero/index.html
 
-https://www.glencoesoftware.com/blog/2023/12/08/ice-binaries-for-omero.html
+Zeroc binaries required to install omero-py - https://www.glencoesoftware.com/blog/2023/12/08/ice-binaries-for-omero.html

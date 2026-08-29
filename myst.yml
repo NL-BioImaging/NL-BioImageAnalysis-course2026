@@ -19,11 +19,11 @@ project:
       children:
       - file: day_1/README
         title: Day 1
+      - file: day_2/README
+        title: Day 2
         children:
         - file: day_2/omero/README
           title: OMERO
-      - file: day_2/README
-        title: Day 2
       - file: day_3/README
         title: Day 3
       - file: day_4/README
