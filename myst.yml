@@ -10,19 +10,17 @@ project:
   id: 1173d565-c15a-4b0b-b337-a47ddacbfd7a
   title: NL-BioImaging Advanced Image Analysis Course 2026
   description: Course website
-  keywords: 
+  keywords:
     - bioimage analysis
     - microscopy
   # Default authors for every page; a page can override this in its own
   # front matter. Ids are defined in book/authors.yml.
-  authors:
-    - mpaul
   github: https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
     - file: README
     - title: Preparation
-      file: preparation/preparation.md    
+      file: preparation/preparation.md
     - title: Program
       children:
       - file: day_1/README
@@ -35,7 +33,7 @@ project:
       - file: day_3/README
         title: Day 3
       - file: day_4/README
-        title: Day 4    
+        title: Day 4
 
 site:
   template: book-theme
