@@ -1,0 +1,47 @@
+# Central author and affiliation definitions for the course book.
+#
+# You normally only edit this file when a new teacher joins the course.
+# Content pages refer to people by their short `id` below, for example:
+#
+#     ---
+#     authors: [mpaul]
+#     ---
+#
+# See https://mystmd.org/guide/frontmatter for all available fields.
+
+version: 1
+project:
+  contributors:
+    - id: mpaul
+      name: Maarten Paul
+      github: maartenpaul
+      # orcid: 0000-0000-0000-0000
+      # email: ...
+      affiliations:
+        - lumc
+    - id: clewis
+      name: Chris Lewis
+      github: Lewis-CJ
+      # orcid: 0000-0000-0000-0000
+      # email: ...
+      affiliations:
+        - mumc
+
+    # Copy this block for each additional teacher.
+    # - id: shortname
+    #   name: First Last
+    #   orcid: 0000-0000-0000-0000
+    #   email: first.last@example.org
+    #   affiliations:
+    #     - lumc
+
+  affiliations:
+    - id: lumc
+      institution: Leiden University Medical Center
+      # ror: https://ror.org/05xvt9f17
+      # city: Leiden
+      # country: Netherlands
+    - id: mumc
+      institution: Maastricht University Medical Center
+    # - id: erasmusmc
+    #   institution: Erasmus MC

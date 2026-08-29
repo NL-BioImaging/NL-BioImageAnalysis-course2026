@@ -1,14 +1,22 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
+
+# Author and affiliation definitions live in book/authors.yml.
+# Pages refer to people by their short id, e.g. `authors: [mpaul]`.
+extends:
+  - ./book/authors.yml
+
 project:
   id: 1173d565-c15a-4b0b-b337-a47ddacbfd7a
   title: NL-BioImaging Advanced Image Analysis Course 2026
   description: Course website
   keywords: 
     - bioimage analysis
-    - microscopy  # authors: []
+    - microscopy
+  # Default authors for every page; a page can override this in its own
+  # front matter. Ids are defined in book/authors.yml.
   authors:
-    - Maarten Paul
+    - mpaul
   github: https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
@@ -32,10 +40,10 @@ project:
 site:
   template: book-theme
   options:
-    #   favicon: favicon.ico
+    favicon: images/favicon.ico
     logo: images/nlbio.jpg
     logo_text: "NL-BioImaging Advanced Image Analysis Course 2026"
-    style: custom-style.css
+    style: book/custom-style.css
     # theme_mode / default_mode are left unset so readers keep the
-    # light/dark toggle; custom-style.css themes both modes.
+    # light/dark toggle; book/custom-style.css themes both modes.
     nav_title: "NL-BioImaging Advanced Image Analysis Course 2026"

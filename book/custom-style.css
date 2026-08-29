@@ -25,14 +25,28 @@ header .myst-branding {
   display: none !important;
 }
 
-/* NL-BioImaging logo: the source is a JPEG with a white matte, so give it a
-   white chip with rounded corners — reads as deliberate on the dark header
+/* NL-BioImaging logo. The theme renders it as
+   a.myst-home-link > div.myst-home-link-logo > img  (there is no <header>
+   ancestor, so header-scoped selectors miss it). The source JPEG has a white
+   matte, so round it into a white disc — deliberate on the dark header
    instead of a bare white rectangle. */
-header img[alt*="NL-BioImaging"],
-header img[src*="nlbio"] {
+/* html.dark ... (0,2,1) is needed to beat the theme's `dark:rounded`,
+   which compiles to `.rounded:is(.dark *)` (0,2,0) and would otherwise
+   leave square white corners around the logo in dark mode.
+   A rounded square rather than a circle: the map outline reaches the edges
+   of the source image, so a circular crop would clip it. */
+.myst-home-link-logo,
+html.dark .myst-home-link-logo {
   background-color: #ffffff;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 2px;
+  overflow: hidden;
+}
+
+.myst-home-link-logo img,
+html.dark .myst-home-link-logo img {
+  border-radius: 6px;
+  display: block;
 }
 
 /* --------------------------------------------------------------------------
