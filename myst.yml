@@ -31,10 +31,11 @@ project:
 
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
-  style: custom-style.css
-  theme_mode: "light"
-  default_mode: "light"
-  nav_title: "NL-BioImaging Advanced Image Analysis Course 2026"
+  options:
+    #   favicon: favicon.ico
+    logo: images/nlbio.jpg
+    logo_text: "NL-BioImaging Advanced Image Analysis Course 2026"
+    style: custom-style.css
+    # theme_mode / default_mode are left unset so readers keep the
+    # light/dark toggle; custom-style.css themes both modes.
+    nav_title: "NL-BioImaging Advanced Image Analysis Course 2026"

@@ -1,123 +1,277 @@
+/* ==========================================================================
+   NL-BioImaging Advanced Image Analysis Course — site theme
+
+   Palette follows the NL-BioimageAnalysis book: the logo green #28a148 is
+   the primary colour. Note that #28a148 only reaches 3.3:1 on white, so it
+   is used for borders/rules/UI edges (>=3:1 is fine there) while *text*
+   uses the darker greens. Every text pair below is >=4.5:1 (most >=7:1) in
+   both light and dark mode.
+
+   The MyST book-theme is Tailwind-based:
+     - dark mode is a `dark` class on <html>
+     - article text is styled through Tailwind Typography's `--tw-prose-*`
+       variables, so we retheme those instead of fighting per-element rules.
+   ========================================================================== */
+
 /* Hide "Made with MyST" branding in header */
 header a[href*="mystmd.org"] {
   display: none !important;
 }
 
-/* Alternative: hide the entire branding link container if needed */
-header .logo-text,
+/* Hide only MyST's own branding blocks — NOT .logo-text, which now carries
+   the site's own logo_text from myst.yml. */
 header .myst-brand,
 header .myst-branding {
   display: none !important;
 }
 
-/* Navy blue color palette based on rgb(0, 17, 88) */
-:root {
-  --navy-primary: #001158;
-  --navy-light: #0029bb;
-  --navy-lighter: #e6eaf5;
-  --navy-dark: #000b44;
-  --navy-darker: #000622;
+/* NL-BioImaging logo: the source is a JPEG with a white matte, so give it a
+   white chip with rounded corners — reads as deliberate on the dark header
+   instead of a bare white rectangle. */
+header img[alt*="NL-BioImaging"],
+header img[src*="nlbio"] {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 2px;
 }
 
-/* Links */
+/* --------------------------------------------------------------------------
+   1. Brand greens (constant across modes) — matching logo colour #28a148
+   -------------------------------------------------------------------------- */
+:root {
+  --green-primary: #28a148;
+  --green-light: #3bc65a;
+  --green-lighter: #e8f5ec;
+  --green-dark: #1f8038;
+  --green-darker: #166029;
+}
+
+/* --------------------------------------------------------------------------
+   2. Semantic tokens — light mode
+   -------------------------------------------------------------------------- */
+:root {
+  --c-heading: var(--green-darker);      /* 7.7:1 */
+  --c-body: #44403c;                     /* 10.3:1 */
+  --c-bold: #1c1917;
+  --c-muted: #57534e;                    /* 7.6:1 */
+
+  --c-link: #1a7031;                     /* 6.2:1 */
+  --c-link-hover: #12591f;               /* 8.5:1 */
+
+  --c-accent: var(--green-primary);      /* borders / rules only */
+  --c-accent-strong: var(--green-dark);
+
+  --c-surface: var(--green-lighter);
+  --c-surface-fg: var(--green-darker);   /* 6.8:1 on surface */
+  --c-surface-border: #bcdfc8;
+
+  --c-mark-fg: #12501f;                  /* 8.5:1 on surface */
+
+  --c-rule: #cfe6d8;
+  --c-shadow: rgba(40, 161, 72, 0.18);
+}
+
+/* Explicit body colour: the theme leaves it at the UA default (black),
+   which is unreadable if anything unstyled renders in dark mode. */
+body {
+  color: var(--c-body);
+}
+
+/* --------------------------------------------------------------------------
+   3. Semantic tokens — dark mode (theme background is #292524)
+   -------------------------------------------------------------------------- */
+html.dark {
+  --c-heading: #a7f3c4;                  /* 11.8:1 */
+  --c-body: #e7e5e4;                     /* 12.1:1 */
+  --c-bold: #f5f5f4;
+  --c-muted: #c7c2be;                    /* 8.6:1 */
+
+  --c-link: #6ee7a0;                     /* 9.8:1 */
+  --c-link-hover: #a7f3c4;               /* 11.8:1 */
+
+  --c-accent: #5fd37e;                   /* 8.0:1 */
+  --c-accent-strong: #a7f3c4;
+
+  --c-surface: #26332b;
+  --c-surface-fg: #bfe8cd;               /* 9.8:1 on surface */
+  --c-surface-border: #3d5545;
+
+  --c-mark-fg: #d7f2e0;                  /* 11.1:1 on surface */
+
+  --c-rule: #3d4a41;
+  --c-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   4. Article body — retheme Tailwind Typography.
+   `html .article` (0,1,1) beats the theme's `.article` base;
+   `html.dark .article` (0,2,1) beats the theme's `.article:is(.dark *)`.
+   -------------------------------------------------------------------------- */
+html .article,
+html .prose,
+html.dark .article,
+html.dark .prose {
+  --tw-prose-body: var(--c-body);
+  --tw-prose-headings: var(--c-heading);
+  --tw-prose-lead: var(--c-muted);
+  --tw-prose-links: var(--c-link);
+  --tw-prose-bold: var(--c-bold);
+  --tw-prose-counters: var(--c-accent-strong);
+  --tw-prose-bullets: var(--c-accent);
+  --tw-prose-hr: var(--c-rule);
+  --tw-prose-quotes: var(--c-body);
+  --tw-prose-quote-borders: var(--c-accent);
+  --tw-prose-captions: var(--c-muted);
+  --tw-prose-code: var(--c-surface-fg);
+  --tw-prose-th-borders: var(--c-surface-border);
+  --tw-prose-td-borders: var(--c-rule);
+  --tw-prose-kbd: var(--c-bold);
+}
+
+/* The theme marks content links with a `.link` utility class whose blue
+   beats --tw-prose-links, so target it directly to keep links green. */
+html a.link,
+html .article a.link,
+html .prose a.link {
+  color: var(--c-link);
+}
+
+html a.link:hover,
+html .article a.link:hover,
+html .prose a.link:hover {
+  color: var(--c-link-hover);
+  text-decoration-color: var(--c-accent);
+}
+
+html .article :where(a):hover,
+html .prose :where(a):hover {
+  color: var(--c-link-hover);
+  text-decoration-color: var(--c-accent);
+  text-decoration-thickness: 2px;
+}
+
+/* Section headings carry the green rule */
+html .article :where(h2),
+html .prose :where(h2) {
+  border-bottom: 2px solid var(--c-accent);
+  padding-bottom: 0.25em;
+}
+
+/* --------------------------------------------------------------------------
+   5. Code
+
+   Inline code gets a green chip. Code BLOCKS are deliberately left alone:
+   the theme renders them as `pre` (transparent) inside `.myst-code-body.hljs`,
+   which owns both the background and the highlight-token colours in each
+   mode. Recolouring only the `pre` there yields light-on-light text, so we
+   restrict ourselves to a green edge.
+   -------------------------------------------------------------------------- */
+html :not(pre) > code {
+  background-color: var(--c-surface);
+  color: var(--c-surface-fg);
+  border: 1px solid var(--c-surface-border);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+html .myst-code-body,
+html.dark .myst-code-body {
+  border-left: 3px solid var(--c-accent);
+}
+
+/* --------------------------------------------------------------------------
+   6. Chrome: links, navigation, table of contents
+   -------------------------------------------------------------------------- */
 a {
-  color: var(--navy-primary);
+  color: var(--c-link);
 }
 
 a:hover {
-  color: var(--navy-dark);
+  color: var(--c-link-hover);
 }
 
-/* Active navigation items */
+/* Page outline — the theme's slate-400 is only 2.6:1 on white */
+html .myst-outline-list,
+html .myst-outline-list a {
+  color: var(--c-muted);
+}
+
+html .myst-outline-list a:hover {
+  color: var(--c-link-hover);
+}
+
+/* Active ToC entry — the theme tints it blue-300/30, which fights the green */
+html .myst-toc-item[aria-current],
+html a.myst-toc-item.bg-blue-200\/30,
+html .myst-toc-item.active {
+  background-color: var(--c-surface) !important;
+  color: var(--c-heading);
+}
+
 nav a.active,
-.toc a.active {
-  color: var(--navy-primary);
-  border-left-color: var(--navy-primary);
-}
-
-/* Navigation hover states */
-nav a:hover,
-.toc a:hover {
-  color: var(--navy-primary);
-  background-color: var(--navy-lighter);
-}
-
-/* Headers with accent */
-h1, h2, h3 {
-  color: var(--navy-darker);
-}
-
-/* Buttons and interactive elements */
-button,
-.button,
-.btn-primary {
-  background-color: var(--navy-lighter);
-  border-color: var(--navy-primary);
-  color: var(--navy-darker);
-}
-
-button:hover,
-.button:hover,
-.btn-primary:hover {
-  background-color: var(--navy-lighter);
-  border-color: var(--navy-dark);
-  color: var(--navy-darker);
-}
-
-/* Code and syntax highlighting accents */
-code {
-  background-color: var(--navy-lighter);
-}
-
-/* Admonitions with navy accent */
-.admonition.tip,
-.admonition.note {
-  border-left-color: var(--navy-primary);
-}
-
-.admonition.tip > .admonition-title,
-.admonition.note > .admonition-title {
-  background-color: var(--navy-lighter);
-  color: var(--navy-darker);
-}
-
-/* Blockquotes */
-blockquote {
-  border-left-color: var(--navy-primary);
-}
-
-/* Table of contents active item */
+.toc a.active,
 .toc-tree li.active > a {
-  color: var(--navy-primary);
+  color: var(--c-heading);
+  border-left-color: var(--c-accent);
   font-weight: 600;
 }
 
-/* Search highlights */
+nav a:hover,
+.toc a:hover {
+  color: var(--c-link-hover);
+  background-color: var(--c-surface);
+}
+
+header a[href*="github.com"]:hover {
+  color: var(--c-accent);
+}
+
+/* --------------------------------------------------------------------------
+   7. Buttons, marks, rules, focus
+   -------------------------------------------------------------------------- */
+.button:not(a):not(button),
+.btn-primary {
+  background-color: var(--c-surface);
+  border: 1px solid var(--c-accent);
+  color: var(--c-surface-fg);
+}
+
+.button:not(a):not(button):hover,
+.btn-primary:hover {
+  background-color: var(--c-surface);
+  border-color: var(--c-accent-strong);
+  color: var(--c-surface-fg);
+}
+
 mark,
 .search-highlight {
-  background-color: var(--navy-lighter);
-  color: var(--navy-darker);
+  background-color: var(--c-surface);
+  color: var(--c-mark-fg);
 }
 
-/* Focus states for accessibility */
-a:focus,
-button:focus,
-input:focus {
-  outline-color: var(--navy-primary);
-  outline-width: 2px;
+blockquote {
+  border-left-color: var(--c-accent);
 }
 
-/* Horizontal rules */
 hr {
-  border-color: var(--navy-light);
+  border-color: var(--c-rule);
 }
 
-/* GitHub link in header */
-header a[href*="github.com"]:hover {
-  color: var(--navy-primary);
+::selection {
+  background-color: var(--c-surface);
+  color: var(--c-mark-fg);
 }
 
-/* People page styling */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   8. People / grid cards
+   -------------------------------------------------------------------------- */
 .grid-item-card img {
   width: 100%;
   height: auto;
@@ -128,10 +282,11 @@ header a[href*="github.com"]:hover {
 
 .grid-item-card {
   text-align: center;
-  transition: transform 0.2s ease;
+  border-top: 3px solid var(--c-accent);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .grid-item-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 17, 88, 0.15);
+  box-shadow: 0 4px 12px var(--c-shadow);
 }
