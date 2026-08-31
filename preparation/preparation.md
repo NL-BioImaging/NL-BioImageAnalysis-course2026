@@ -35,3 +35,55 @@ git clone https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026
 cd NL-BioImageAnalysis-course2026
 ```
 Good luck, and we hope that you enjoy the course. If you have any questions beforehand, please feel free to ask using the course registration email.
+
+
+## Notes
+Here's a clean, finalized version of that instruction block:
+
+---
+
+### Checking your conda channel configuration
+
+If you already have conda installed on your laptop (from a previous course, project, or Anaconda install), it's important to check that it's using the **conda-forge** channel and not the **defaults** channel. When accidentally pulling packages from `defaults`  you can run into Anaconda's Terms of Service for the `defaults` channel in some institutional/commercial contexts.
+
+If you installed via **Miniforge** as instructed, you should already be safe. Miniforge ships preconfigured to use conda-forge only. But it's worth verifying, especially if you have an older conda install lying around.
+
+**1. Check your current channels:**
+
+```bash
+conda config --show channels
+```
+
+This should return:
+
+```
+channels:
+  - conda-forge
+```
+
+If instead you see `defaults` listed (alone or alongside `conda-forge`), you need to fix your configuration.
+
+**2. Fix it:**
+
+```bash
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+conda config --remove channels defaults
+```
+
+- The first line makes sure `conda-forge` is set and given top priority.
+- The second line (`strict`) makes sure conda always prefers conda-forge packages over any other channel, even if one sneaks back in later.
+- The third line removes `defaults` explicitly. If it wasn't there to begin with, this command will show a harmless error — that's fine, it just means there was nothing to remove.
+
+**3. Verify the fix:**
+
+```bash
+conda config --show channels
+```
+
+You should now see only:
+
+```
+channels:
+  - conda-forge
+```
