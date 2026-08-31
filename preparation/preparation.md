@@ -38,9 +38,6 @@ Good luck, and we hope that you enjoy the course. If you have any questions befo
 
 
 ## Notes
-Here's a clean, finalized version of that instruction block:
-
----
 
 ### Checking your conda channel configuration
 
