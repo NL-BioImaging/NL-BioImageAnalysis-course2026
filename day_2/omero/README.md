@@ -11,6 +11,13 @@ pip install omero-py ezomero matplotlib numpy
 
 ```
 
+Activate the conda environment with jupyter lab you already installed  during the [preparation](../../preparation/preparation.md).
+
+```
+conda activate jlab
+jupyter-lab
+```
+
 ### Alternative option: uv virtual environment 
 #### Windows
 ```
