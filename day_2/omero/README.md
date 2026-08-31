@@ -18,7 +18,7 @@ conda activate jlab
 jupyter-lab
 ```
 
-Open 'omero.ipynb' in Jupyter lab.
+Open `omero.ipynb` in Jupyter lab.
 
 ### Alternative option: uv virtual environment 
 #### Windows
