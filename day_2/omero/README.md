@@ -6,8 +6,8 @@
 conda create -n nlbi26-day2-omero python=3.12
 conda activate nlbi26-day2-omero
 
-conda install zeroc-ice -y
-pip install omero-py jupyterlab
+conda install zeroc-ice jupyterlab -y
+pip install omero-py ezomero matplotlib numpy
 
 ```
 
