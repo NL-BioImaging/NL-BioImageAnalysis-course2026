@@ -81,6 +81,12 @@ html.dark .myst-home-link-logo img {
 
   --c-mark-fg: #12501f;                  /* 8.5:1 on surface */
 
+  /* Selection/highlight must be distinct from --c-surface, otherwise
+     selecting inline code (which uses --c-surface as its chip background)
+     paints highlight on an identical colour and looks like nothing happened. */
+  --c-select-bg: #8fd6a8;
+  --c-select-fg: #0f3d1e;                /* 7.2:1 on select-bg */
+
   --c-rule: #cfe6d8;
   --c-shadow: rgba(40, 161, 72, 0.18);
 }
@@ -111,6 +117,9 @@ html.dark {
   --c-surface-border: #3d5545;
 
   --c-mark-fg: #d7f2e0;                  /* 11.1:1 on surface */
+
+  --c-select-bg: #35704a;
+  --c-select-fg: #eafaf0;                /* 5.5:1 on select-bg */
 
   --c-rule: #3d4a41;
   --c-shadow: rgba(0, 0, 0, 0.5);
@@ -259,8 +268,8 @@ header a[href*="github.com"]:hover {
 
 mark,
 .search-highlight {
-  background-color: var(--c-surface);
-  color: var(--c-mark-fg);
+  background-color: var(--c-select-bg);
+  color: var(--c-select-fg);
 }
 
 blockquote {
@@ -272,8 +281,16 @@ hr {
 }
 
 ::selection {
-  background-color: var(--c-surface);
-  color: var(--c-mark-fg);
+  background-color: var(--c-select-bg);
+  color: var(--c-select-fg);
+}
+
+/* Inline code sets its own colours, so it needs the selection colours
+   restated to inherit them while selected. */
+code::selection,
+code *::selection {
+  background-color: var(--c-select-bg);
+  color: var(--c-select-fg);
 }
 
 a:focus-visible,
