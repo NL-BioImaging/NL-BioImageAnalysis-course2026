@@ -1,0 +1,22 @@
+name: omero-image-processing-env
+channels:
+ - conda-forge
+ - defaults
+dependencies:
+ - python==3.12
+ - zeroc-ice
+ - omero-py
+ - numpy
+ - tifffile
+ - scipy
+ - scikit-image
+ - imageio
+ - pandas
+ - pyyaml
+ - psutil
+ - matplotlib
+ - seaborn
+ - napari
+ - pip
+ - pip:
+    - ezomero
