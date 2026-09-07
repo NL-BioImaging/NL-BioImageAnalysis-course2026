@@ -34,6 +34,8 @@ project:
     #     title: Day 3
     #   - file: day_4/README
     #     title: Day 4
+    - title: Other
+      file: other/ResearchCloud.md
 
 site:
   template: book-theme
