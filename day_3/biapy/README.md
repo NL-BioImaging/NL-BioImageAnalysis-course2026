@@ -6,9 +6,9 @@ Daniel Franco-Barranco (MRC Laboratory of Molecular Biology, Cambridge)
 ## Hands-on session
 
 ### Google Colab
-Yoou will need a Google account to run this. Alternatively you can follow 
+You will need a Google account to run this notebooks. Alternatively you can make use of Research Cloud.
 
-#### 2D Instance Segmentation
+#### Run 2D Instance Segmentation notebook
 - Go to: https://biapyx.github.io/
 - Select Colab notebooks
 - Select `2D Instance Segmentation`
@@ -43,8 +43,10 @@ If you now like to use your model on other data you can use a different notebook
 
 ## Run on SURF research cloud
 
-## Run bia locally
-```
+
+
+## Run biapy locally
+```bash
 conda create -n nlbi26-day3-biapy python=3.13
 conda activate nlbi26-day3-biapy
 pip install biapy

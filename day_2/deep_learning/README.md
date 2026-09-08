@@ -1,0 +1,1 @@
+# Principles of image segmentation with AI

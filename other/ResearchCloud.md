@@ -10,6 +10,33 @@ This environment can be a **Jupyter server** that is accessible from the browser
 
 The instructions below describe how to access an existing running machine. If you like to learn more on how to deploy new machines you can check more information here.
 
+## Linux desktop
+
+For GUI tools (e.g. napari, cellpose) it is the best to deploy a full desktop. Within the desktop you can also run JupyterLab.
+
+![alt text](images/desktop.png)
+
+The desktop can be accessed via the browser.
+
+::: {tip}
+If you like to copy text from your own desktop to the machine or vice versa: `Ctrl-Alt-Shift` will open a menu on the side which allows you to copy and paste text.
+:::
+
+### Opening applications
+
+In this example we will open napari with the Stardist plugin preinstalled.    
+- Click on the Stardist icon on the desktop. It will open napari with the stardist-napari plugin installed.
+- In napari you can try open a sample image via `File-> Open Sample -> stardist-napari -> Nuclei(2D)`
+- Open the plugin `Plugins -> Stardist`
+- Press `Run` and the segmentation should appear.
+
+![alt text](images/napari-stardist.png)
+
+::: {note}
+For more convenience you can setup Remote Desktop (Windows: Remote Desktop Connection, Linux: Remmina)
+Then to get access you need to use single use password - [link](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854429/Workspace+access+with+TOTP#WorkspaceaccesswithTOTP-UbuntuDesktopwithTOTP)
+:::
+
 ## Jupyter lab
 
 If you received a URL to the Jupyter server you can access it directly. It might ask you to login with an account.
@@ -64,31 +91,5 @@ Install what you like, then add to the jupyter kernels.
 python -m ipykernel install --user --name <name> --displayname <Friendly name>
 ```
 
-## Linux desktop
+### Transfer data
 
-For GUI tools (e.g. napari, cellpose) it is easier to deploy a full desktop. Within the desktop you can also run JupyterLab.
-
-![alt text](images/desktop.png)
-
-The desktop can be accessed via the browser (easiest).
-
-::: {tip}
-If you like to copy text from your own desktop to the machine or vice versa: `Ctrl-Alt-Shift` will open a menu on the side which allows you to copy and paste text.
-:::
-
-### Opening applications
-
-In this example we will open napari with the Stardist plugin preinstalled.    
-- Click on the Stardist icon on the desktop. It will open napari with the stardist-napari plugin installed.
-- In napari you can try open a sample image via `File-> Open Sample -> stardist-napari -> Nuclei(2D)`
-- Open the plugin `Plugins -> Stardist`
-- Press `Run` and the segmentation should appear.
-
-![alt text](images/napari-stardist.png)
-
-::: {note}
-For more convenience you can setup Remote Desktop (Windows: Remote Desktop Connection, Linux: Remmina)
-Then to get access you need to use single use password - [link](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854429/Workspace+access+with+TOTP#WorkspaceaccesswithTOTP-UbuntuDesktopwithTOTP)
-:::
-
-## Transfer data
