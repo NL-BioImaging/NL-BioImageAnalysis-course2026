@@ -1,6 +1,6 @@
 
 
-# Afternoon session
+# Image processing
 
 ## Setup
 
