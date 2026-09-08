@@ -40,6 +40,11 @@ conda activate jupyter-lab
 jupyter-lab
 ```
 
+### Example images
+
+You'll need to download the example data folder located at:
+`day_1/image_processing/images`.
+
 ## Contents overview
 
 There are three ±1 hour sessions this afternoon, with breaks in between. Topics that will be covered are:
