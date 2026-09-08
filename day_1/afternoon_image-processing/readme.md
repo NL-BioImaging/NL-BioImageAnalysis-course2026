@@ -9,6 +9,9 @@
 During the preparation and morning session [you have already installed](https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026/blob/main/preparation/preparation.md) 
 JupyterLab and Conda.
 
+I called my `jlab` environment `2026_jlab`, but you should already be 
+have a similar environment like this:
+
 ```sh
 # Conda env with JupyterLab
 conda create -n 2026_jlab jupyterlab nb_conda_kernels
