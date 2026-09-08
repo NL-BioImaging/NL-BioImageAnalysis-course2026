@@ -1,6 +1,7 @@
 # NL-BioImageAnalysis-course 2026
-Repository for the NL-BI Advanced Image Analysis course
-21-24 September 2026, Erasmus MC, Rotterdam
+This repository contains the materials for the NL-BI Advanced Image Analysis course   
+
+organized from 21-24 September 2026 at Erasmus MC in Rotterdam
 
 Course website: https://courses.microscopie.nl/?event_id=527
 
