@@ -42,8 +42,11 @@ jupyter-lab
 
 ### Example images
 
-You'll need to download the example data folder located at:
-`day_1/image_processing/images`.
+You'll need to use the example data folder located in the workshop repository at 
+`day_1/image_processing/images`. 
+You cloned (copied) this repository already to your local computer.
+
+Move the `images` folder to the folder we're your working on your Jupyter notebook.
 
 ## Contents overview
 
