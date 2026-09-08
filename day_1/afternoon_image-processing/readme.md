@@ -6,18 +6,15 @@
 
 ### JupyterLab according to course instructions
 
-During the preparation and morning session you have already installed 
+During the preparation and morning session [you have already installed](https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026/blob/main/preparation/preparation.md) 
 JupyterLab and Conda.
-
-According to the [course preparations](https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026/blob/main/preparation/preparation.md), I have also installed an environment from which JupyterLab runs:
 
 ```sh
 # Conda env with JupyterLab
 conda create -n 2026_jlab jupyterlab nb_conda_kernels
 ```
 
-`nb_conda_kernels` allows JupyterLab to work with other environments
-than the one it's installed in.
+Note that `nb_conda_kernels` allows JupyterLab to work with other environments than the one it's installed in.
 
 ### The environment for Image processing methods
 
