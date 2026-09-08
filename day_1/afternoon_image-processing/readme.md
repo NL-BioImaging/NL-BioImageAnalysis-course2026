@@ -21,9 +21,8 @@ Note that `nb_conda_kernels` allows JupyterLab to work with other environments t
 
 ### The environment for Image processing methods
 
-The environment that holds all the libraries to follow
-the "Image processing methods" part of the course, 
-looks as follows:
+For this afternoon, you'll need to install the following 
+libraries as well:
 
 ```sh
 # Environment 
@@ -35,7 +34,7 @@ in jupyter-lab.*
 
 ### Using the envirnoment
 
-To use JupyterLab and this environment, [as explained](), use:
+To use JupyterLab and this environment, [as explained](https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026/blob/main/preparation/preparation.md), use:
 ```sh
 conda activate jupyter-lab
 jupyter-lab
