@@ -1,0 +1,47 @@
+
+
+# Afternoon session
+
+## Setup
+
+### JupyterLab according to course instructions
+
+During the preparation and morning session you have already installed 
+JupyterLab and Conda.
+
+According to the [course preparations](https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026/blob/main/preparation/preparation.md), I have also installed an environment from which JupyterLab runs:
+
+```sh
+# Conda env with JupyterLab
+conda create -n 2026_jlab jupyterlab nb_conda_kernels
+```
+
+`nb_conda_kernels` allows JupyterLab to work with other environments
+than the one it's installed in.
+
+### The environment for Image processing methods
+
+The environment that holds all the libraries to follow
+the "Image processing methods" part of the course, 
+looks as follows:
+
+```sh
+# Environment 
+conda create -n 2026_image_processing -c conda-forge scikit-image scipy seaborn matplotlib tifffile numpy imageio pandas ipykernel
+```
+
+*Note that ipykernel is required for the environment to be visible 
+in jupyter-lab.*
+
+### Using the envirnoment
+
+To use JupyterLab and this environment, [as explained](), use:
+```sh
+conda activate jupyter-lab
+jupyter-lab
+```
+
+
+
+
+
