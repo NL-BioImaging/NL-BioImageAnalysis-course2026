@@ -26,11 +26,11 @@ libraries as well:
 
 ```sh
 # Environment 
-conda create -n 2026_image_processing -c conda-forge scikit-image scipy seaborn matplotlib tifffile numpy imageio pandas ipykernel
+conda create -n 2026_image_processing -c conda-forge scikit-image scipy seaborn matplotlib tifffile numpy imageio pandas ipykernel nbformat
 ```
 
-*Note that ipykernel is required for the environment to be visible 
-in jupyter-lab.*
+*Note that `ipykernel` is required for the environment to be visible 
+in jupyter-lab, `nbformat` is required to run one notebook from inside another notebook.*
 
 ### Using the envirnoment
 
@@ -46,7 +46,7 @@ You'll need to use the example data folder located in the workshop repository at
 `day_1/image_processing/images`. 
 You cloned (copied) this repository already to your local computer.
 
-Move the `images` folder to the folder we're your working on your Jupyter notebook.
+Move the `images` folder to the folder where your working on your Jupyter notebook.
 
 ## Contents overview
 
@@ -54,12 +54,12 @@ There are three ±1 hour sessions this afternoon, with breaks in between. Topics
 
 - Hour 1 (75 min)
     - Implement global and local **thresholding** to segment objects (with the histogram as important tool)
-    - Understand and use **masks, labels and regions** (connected components) to analyze ROIs in the image.
     - Understand what a **convolutional image operation** is, understand what the effect of a kernel is, and why to apply it.
-- Hour 2 (60 min)
-    - Apply **common filters** (Gaussian, median, variance) and explain when each is appropriate
     - Conceptually understand **morphology operations** (dilation, erosion, skeletonization)
-    - Understand when **background processing and correction** is important.
+- Hour 2 (60 min)
+    - Understand and use **masks, labels and regions** (connected components) to analyze ROIs in the image.
+    - Understand when **background processing and correction** is important.    
+    - Apply **common filters** (Gaussian, median, variance) and explain when each is appropriate
 - Hour 3 (60 min)
     - Build a simple **segmentation workflow** combining multiple steps
     - Evaluate segmentation quality through **visual inspection**
