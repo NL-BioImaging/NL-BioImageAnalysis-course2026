@@ -1,0 +1,52 @@
+# BiaPy version: 3.7.0
+
+SYSTEM:
+    NUM_CPUS: -1
+
+PROBLEM:
+    TYPE: INSTANCE_SEG
+    NDIM: 2D
+    INSTANCE_SEG:
+        DATA_CHANNELS: BC
+  
+DATA: 
+    PATCH_SIZE: (256, 256, 1)  
+    TRAIN:                                                                                                              
+        PATH: /path/to/data
+        GT_PATH: /path/to/data
+        IN_MEMORY: True
+    VAL:
+        SPLIT_TRAIN: 0.1
+    TEST:                                                                                                               
+        PATH: /path/to/data
+        GT_PATH: /path/to/data
+        IN_MEMORY: True
+        LOAD_GT: True
+        PADDING: (32,32)
+
+AUGMENTOR:
+    ENABLE: True
+    RANDOM_ROT: True
+    VFLIP: True
+    HFLIP: True
+
+MODEL:
+    ARCHITECTURE: unet
+    LOAD_CHECKPOINT: False
+
+TRAIN:
+    ENABLE: True
+    OPTIMIZER: ADAMW
+    LR: 1.E-4
+    BATCH_SIZE: 8
+    EPOCHS: 100
+    PATIENCE: 20
+
+# Loss function
+LOSS:
+    CLASS_REBALANCE: True # give the same weight to all problem representation channels
+
+TEST:
+    ENABLE: True
+    AUGMENTATION: False
+    FULL_IMG: False
