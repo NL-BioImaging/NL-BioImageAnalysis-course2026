@@ -1,69 +1,32 @@
 
+# Using these notebooks in standalone
 
-# Image processing
 
-## Setup
+#### 
 
-### JupyterLab according to course instructions
+You should have a jlab environment (`conda create -n jlab jupyterlab nb_conda_kernels`, 
+where *nb_conda_kernels* allows JupyterLab to connect to other environments).
 
-During the preparation and morning session [you have already installed](https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026/blob/main/preparation/preparation.md) 
-JupyterLab and Conda.
+#### Create an image processing environment
 
-I called my `jlab` environment `2026_jlab`, but you should already be 
-have a similar environment like this:
-
-```sh
-# Conda env with JupyterLab
-conda create -n 2026_jlab jupyterlab nb_conda_kernels
-```
-
-Note that `nb_conda_kernels` allows JupyterLab to work with other environments than the one it's installed in.
-
-### The environment for Image processing fundamentals
-
-For this afternoon, you'll need to install the following 
-libraries as well:
+For this afternoon, we'll use the following environment:
 
 ```sh
 # Environment 
 conda create -n 2026_image_processing -c conda-forge scikit-image scipy seaborn matplotlib tifffile numpy imageio pandas ipykernel nbformat
 ```
 
-*Note that `ipykernel` is required for the environment to be visible 
-in jupyter-lab, `nbformat` is required to run one notebook from inside another notebook.*
+Here, *ipykernel* is required for the environment to be visible 
+in JupyterLab, *nbformat* is required to run one notebook from inside another notebook.
 
-### Using the envirnoment
 
-To use JupyterLab and this environment, [as explained](https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026/blob/main/preparation/preparation.md), use:
-```sh
-conda activate jupyter-lab
-jupyter-lab
-```
-
-### Example images
+#### Copy example images
 
 You'll need to use the example data folder located in the workshop repository at 
 `day_1/image_processing/images`. 
 You cloned (copied) this repository already to your local computer.
 
-Move the `images` folder to the folder where your working on your Jupyter notebook.
-
-## Contents overview
-
-There are three ±1 hour sessions this afternoon, with breaks in between. Topics that will be covered are:
-
-- Hour 1 (75 min)
-    - Implement global and local **thresholding** to segment objects (with the histogram as important tool)
-    - Understand what a **convolutional image operation** is, understand what the effect of a kernel is, and why to apply it.
-    - Conceptually understand **morphology operations** (dilation, erosion, skeletonization)
-- Hour 2 (60 min)
-    - Understand and use **masks, labels and regions** (connected components) to analyze ROIs in the image.
-    - Understand when **background processing and correction** is important.    
-    - Apply **common filters** (Gaussian, median, variance) and explain when each is appropriate
-- Hour 3 (60 min)
-    - Build a simple **segmentation workflow** combining multiple steps
-    - Evaluate segmentation quality through **visual inspection**
-    - Perform **measurements** on the segmentations
+Copy the `images` folder to the folder where you are working on your Jupyter notebook.
 
 
 
