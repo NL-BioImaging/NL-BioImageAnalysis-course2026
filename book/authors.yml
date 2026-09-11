@@ -26,6 +26,13 @@ project:
       # email: ...
       affiliations:
         - mumc
+    - id: bvdbroek
+      name: Bram van den Broek
+      github: BioImaging-NKI
+      # orcid: 0000-0000-0000-0000
+      # email: ...
+      affiliations:
+        - nki
 
     # Copy this block for each additional teacher.
     # - id: shortname
@@ -45,3 +52,9 @@ project:
       institution: Maastricht University Medical Center
     # - id: erasmusmc
     #   institution: Erasmus MC
+    - id: nki
+      institution: Netherlands Cancer Institute
+    - id: uva
+      institution: University of Amsterdam
+    - id: emc
+      institution: Erasmus University Medical Center
