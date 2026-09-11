@@ -19,7 +19,7 @@ No Python/git installed? Check out the [preparations](preparation/preparation.md
 ## Jupyter book
 To run the jupyter book locally
 
-If you have cloned this repository locally you can use `uv` to install the dependencies to run Jupyter book locally.
+If you have cloned this repository locally you can use `uv` to install the dependencies to run Jupyter book locally. Don't have `uv` yet? See the [uv installation page](https://docs.astral.sh/uv/getting-started/installation/).
 Just run in the repository folder.`
 Create a .venv based on `pyproject.toml`
 ```
