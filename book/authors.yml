@@ -33,6 +33,13 @@ project:
       # email: ...
       affiliations:
         - nki
+    - id: mwehrens
+      name: Martijn Wehrens
+      github: Jintram
+      # orcid: 0000-0000-0000-0000
+      # email: ...
+      affiliations:
+        - uva
 
     # Copy this block for each additional teacher.
     # - id: shortname

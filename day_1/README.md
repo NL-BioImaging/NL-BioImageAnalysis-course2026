@@ -1,3 +1,7 @@
+---
+authors: [mwehrens]
+---
+
 # Program
 
 ##  Morning: Introduction to Python and Jupyter notebooks
