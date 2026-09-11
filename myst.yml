@@ -44,6 +44,7 @@ site:
     logo: images/nlbio.jpg
     logo_text: "NL-BioImaging Advanced Image Analysis Course 2026"
     style: book/custom-style.css
-    # theme_mode / default_mode are left unset so readers keep the
-    # light/dark toggle; book/custom-style.css themes both modes.
+    # Readers keep the light/dark toggle; book/custom-style.css themes
+    # both modes. book-theme has no option for the default mode, so the
+    # deploy workflow (.github/workflows/deploy.yml) patches it to light.
     nav_title: "NL-BioImaging Advanced Image Analysis Course 2026"

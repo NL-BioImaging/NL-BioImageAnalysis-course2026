@@ -6,6 +6,8 @@ on:
   push:
     # Runs on pushes targeting the default branch
     branches: [main]
+  # Allows re-running the deploy by hand from the Actions tab
+  workflow_dispatch:
 env:
   # `BASE_URL` determines, relative to the root of the domain, the URL that your site is served from.
   # E.g., if your site lives at `https://mydomain.org/myproject`, set `BASE_URL=/myproject`.
@@ -39,6 +41,13 @@ jobs:
         run: npm install -g jupyter-book
       - name: Build HTML Assets
         run: jupyter-book build --html
+      # book-theme follows the reader's OS light/dark preference and has no option
+      # to change that. Make the "prefers light" check always true so light is the
+      # default; the theme toggle and a reader's saved choice still work.
+      - name: Default to light theme
+        run: |
+          grep -rlZ --include='*.html' --include='*.js' 'myst:theme' _build/html \
+            | xargs -0 sed -i 's/(prefers-color-scheme: light)/all/g'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
