@@ -21,11 +21,24 @@ project:
     - file: README
     - title: Preparation
       file: preparation/preparation.md
-    # - title: Program
-    #   children:
-    #   - file: day_1/README
-    #     title: Day 1
-    #   - file: day_2/README
+    - title: Program
+      children:
+      - file: day_1/README
+        title: Day 1
+        children:
+        - file: day_1/image_processing/Image_processing_concepts_pt1.ipynb
+          title: Notebook - Image processing concepts (1/3)
+        - file: day_1/image_processing/Image_processing_concepts_pt1_answers.ipynb
+          title: Notebook - Image processing concepts (1/3) answers to exercises
+        - file: day_1/image_processing/Image_processing_concepts_pt2.ipynb
+          title: Notebook - Image processing concepts (2/3)
+        - file: day_1/image_processing/Image_processing_concepts_pt2_answers.ipynb
+          title: Notebook - Image processing concepts (2/3) answers to exercises
+        - file: day_1/image_processing/Image_processing_concepts_pt3.ipynb
+          title: Notebook - Image processing concepts (3/3)
+        - file: day_1/image_processing/Image_processing_concepts_pt3_answers.ipynb
+          title: Notebook - Image processing concepts (3/3) answers to exercises          
+    #  - file: day_2/README
     #     title: Day 2
     #     children:
     #     - file: day_2/omero/README
