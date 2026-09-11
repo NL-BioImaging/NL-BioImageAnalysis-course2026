@@ -197,6 +197,8 @@ Good luck, and we hope that you enjoy the course. If you have any questions befo
 
 ## 5. Clone this repository (at the start of the course)
 
+You don't need to do this step until the course starts, because the material is still being updated. At the start of the course we will do this together.
+
 Cloning the repository downloads all its files into a folder on your computer.
 
 A terminal is always "in" a folder, its *working directory*, and `git clone` downloads the repository into whatever folder you are in. Open a **fresh terminal** so you start in your home folder (`C:\Users\<you>` on Windows, `/Users/<you>` on macOS, `/home/<you>` on Linux), then run:
