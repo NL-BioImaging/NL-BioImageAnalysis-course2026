@@ -3,7 +3,7 @@ authors: [mpaul, clewis, bvdbroek]
 ---
 
 # Setting up your computer
-So that we can fully utilise the time during the course, we ask that you prepare your computer before the course starts. 
+In order to fully utilise the time during the course, we ask that you prepare your computer before the course starts. 
 
 Please follow the following steps and notify the course organisers if you get stuck. We can help, and would much rather do this prior to the course! 
 
