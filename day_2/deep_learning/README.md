@@ -42,7 +42,7 @@ conditions.
 ## Requirements
 
 - [Install](/preparation/preparation.md) JupyterLab and Conda
-- A jlab environment
+- A jlab environment, which we already installed on the first day.
     - `conda create -n jlab jupyterlab nb_conda_kernels`
 - A dedicated deep learning environment:
 
@@ -53,8 +53,7 @@ pip install "tensorflow>=2.16,<2.22" stardist "cellpose<4" spotiflow
 ```
 
 The four deep learning packages come from `pip` rather than conda-forge: conda-forge
-has no recent TensorFlow build for Windows, and no Spotiflow package for Windows at
-all, while all four ship working wheels on PyPI for Windows, macOS and Linux.
+has no recent TensorFlow build for Windows, and no currently no Spotiflow package.
 
 Notes:
 
