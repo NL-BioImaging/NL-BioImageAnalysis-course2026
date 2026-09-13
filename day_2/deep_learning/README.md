@@ -1,7 +1,7 @@
 # Principles of image segmentation with AI
 
 In this session we segment cells and detect spots with pretrained deep learning models.
-We do not train anything ourselves, but we look at what
+We do not train anything AI models ourselves, but we look at what
 these models need from us in order to work.
 
 The three notebooks follow the same shape: first an example image that suits the model,
@@ -11,7 +11,7 @@ then our own images, then a few exercises.
 - `cellpose.ipynb` — cells and nuclei from predicted flows with Cellpose
 - `spotiflow.ipynb` — spots as coordinates with Spotiflow, combined with the nuclei
 
-Each notebook has a matching `*_answers.ipynb` with worked answers to the exercises.
+Each notebook has a matching `*_answers.ipynb` with answers to the exercises.
 
 ## Learning goals
 
