@@ -31,5 +31,5 @@ uv sync
 uv run jupyter book start
 ```
 
-## Licence
+## License
 The content of this repository is licensed as [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) by the contributors of this repository unless mentioned otherwise.
