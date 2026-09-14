@@ -226,3 +226,6 @@ day_2/deep_learning/data/
 day_2/deep_learning/experiment_dir/
 day_3/AI_training/biapy_output/
 day_3/AI_training/training_data/
+
+# other
+.DS_Store

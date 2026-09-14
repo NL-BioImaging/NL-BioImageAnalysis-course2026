@@ -36,10 +36,11 @@ project:
     - id: mwehrens
       name: Martijn Wehrens
       github: Jintram
-      # orcid: 0000-0000-0000-0000
+      orcid: 0000-0002-2450-4524
       # email: ...
       affiliations:
         - uva
+        - lcam    
 
     # Copy this block for each additional teacher.
     # - id: shortname
@@ -48,6 +49,7 @@ project:
     #   email: first.last@example.org
     #   affiliations:
     #     - lumc
+    
 
   affiliations:
     - id: lumc
@@ -57,11 +59,13 @@ project:
       # country: Netherlands
     - id: mumc
       institution: Maastricht University Medical Center
+    - id: uva
+      institution: University of Amsterdam
+    - id: lcam
+      institution: Van Leeuwenhoek Centre for Advanced Microscopy
     # - id: erasmusmc
     #   institution: Erasmus MC
     - id: nki
       institution: Netherlands Cancer Institute
-    - id: uva
-      institution: University of Amsterdam
     - id: emc
       institution: Erasmus University Medical Center
