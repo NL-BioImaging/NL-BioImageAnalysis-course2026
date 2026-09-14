@@ -69,7 +69,10 @@ kernel **Python [conda env:2026_deep_learning]**.
 
 ## Files in `data/`
 
+- `stardist_example1.tif` — example nuclei image from the StarDist training data
+- `hela_cells.tif` — three-channel HeLa image used in the Cellpose notebook
+
+## Files to download
 - `MAX_2h_IR_*.tif`, `MAX_2h_control_*.tif` — two-channel images of irradiated and
   untreated cells (channel 0: DNA damage foci, channel 1: nuclei)
-- `stardist/` — example nuclei images from the StarDist training data
-- `hela_cells.tif` — three-channel HeLa image used in the Cellpose notebook
+   Download from: https://surfdrive.surf.nl/s/qCSnzRnTZyA2Qqk
