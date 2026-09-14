@@ -1,9 +1,12 @@
 # NL-BioImageAnalysis-course 2026
-This repository contains the materials for the NL-BI Advanced Image Analysis course   
+This repository contains the training materials for the NL-BI Advanced Image Analysis course   
 
 Organized from 21-24 September 2026 at Erasmus MC in Rotterdam
 
 Course website: https://courses.microscopie.nl/?event_id=527
+
+The materials can be read as Jupyter book at:
+https://nl-bioimaging.github.io/NL-BioImageAnalysis-course2026/
 
 ## Getting started
 Check out hte preparation documentation for the course [here](preparation/preparation.md).
@@ -29,3 +32,6 @@ uv sync
 ```
 uv run jupyter book start
 ```
+
+## Licence
+The content of this repository is licensed as [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) by the contributors of this repository.
