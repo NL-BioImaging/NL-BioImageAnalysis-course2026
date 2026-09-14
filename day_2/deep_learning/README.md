@@ -47,12 +47,12 @@ conditions.
 - A dedicated deep learning environment:
 
 ```bash
-conda create -n 2026_deep_learning -c conda-forge python=3.12 ipykernel nbformat numpy matplotlib tifffile scikit-image pandas seaborn pip
+conda create -n 2026_deep_learning -c conda-forge python=3.12 ipykernel nbformat pip
 conda activate 2026_deep_learning
-pip install "tensorflow>=2.16,<2.22" stardist "cellpose<4" spotiflow
+pip install "tensorflow>=2.16,<2.22" stardist "cellpose<4" spotiflow numpy matplotlib tifffile scikit-image pandas seaborn
 ```
 
-The four deep learning packages come from `pip` rather than conda-forge: conda-forge
+The deep learning packages come from `pip` rather than conda-forge: conda-forge
 has no recent TensorFlow build for Windows, and no currently no Spotiflow package.
 
 Notes:
