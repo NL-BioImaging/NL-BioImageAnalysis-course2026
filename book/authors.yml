@@ -25,7 +25,13 @@ project:
       # orcid: 0000-0000-0000-0000
       # email: ...
       affiliations:
-        - mumc
+        - mumc    
+    - id: mwehrens
+      name: Martijn Wehrens
+      orcid: 0000-0002-2450-4524
+      # email:
+      affiliations:
+        - UvA, LCAM
 
     # Copy this block for each additional teacher.
     # - id: shortname
@@ -34,6 +40,7 @@ project:
     #   email: first.last@example.org
     #   affiliations:
     #     - lumc
+    
 
   affiliations:
     - id: lumc
@@ -43,5 +50,9 @@ project:
       # country: Netherlands
     - id: mumc
       institution: Maastricht University Medical Center
+    - id: uva
+      institution: University of Amsterdam
+    - id: lcam
+      institution: Van Leeuwenhoek Centre for Advanced Microscopy
     # - id: erasmusmc
     #   institution: Erasmus MC

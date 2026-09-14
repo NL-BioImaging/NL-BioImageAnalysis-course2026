@@ -220,3 +220,6 @@ __marimo__/
 # MyST build outputs
 _build
 /.idea
+
+# other
+.DS_Store
