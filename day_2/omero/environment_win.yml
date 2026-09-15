@@ -1,0 +1,22 @@
+name: omero-image-processing-env
+channels:
+ - conda-forge
+ - defaults
+dependencies:
+ - python==3.12
+ - omero-py
+ - numpy
+ - tifffile
+ - scipy
+ - scikit-image
+ - imageio
+ - pandas
+ - pyyaml
+ - psutil
+ - matplotlib
+ - seaborn
+ - napari
+ - pip
+ - pip:
+    - https://github.com/glencoesoftware/zeroc-ice-py-win-x86_64/releases/download/20240325/zeroc_ice-3.6.5-cp312-cp312-win_amd64.whl
+    - ezomero
