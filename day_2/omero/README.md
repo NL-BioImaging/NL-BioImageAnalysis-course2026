@@ -3,10 +3,9 @@
 
 ### Conda
 ```
-conda create -n nlbi26-day2-omero python=3.12
+conda create -n nlbi26-day2-omero python=3.12 "zeroc-ice>=3.6.5,3.7" ipykernel 
 conda activate nlbi26-day2-omero
 
-conda install zeroc-ice ipykernel -y
 pip install omero-py ezomero matplotlib numpy
 
 ```
