@@ -14,9 +14,8 @@ dependencies:
  - pandas
  - pyyaml
  - psutil
- - matplotlib
+ - matplotlib-base
  - seaborn
- - napari
  - pip
  - pip:
     - ezomero
