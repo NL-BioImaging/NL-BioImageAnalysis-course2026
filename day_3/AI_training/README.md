@@ -1,30 +1,40 @@
 # Preparing data, training and evaluating an AI model
 
-Pretrained models such as StarDist and Cellpose work well when your images look
-like what they were trained on. However in situations where your data does look different or you want segment specific objects from your images, you can train an AI model yourself.
+Pretrained models such as StarDist and Cellpose work well when your images resemble the
+data they were trained on. When your images look different, or you want to segment
+objects that these generalist models aren't designed for, training your own model can
+give better results.
 
-In this tutorial we illustrate this by training an AI model from the actin(phalloidin) channel.
-The reason we do this is because if we train such model we could possibly exclude the DNA stainingg from subsequent experiments.
+In this tutorial we illustrate this by training a nuclei segmentation model on the
+actin (phalloidin) channel instead of the DNA (Hoechst) channel. The motivation is that if
+such a model works well, the DNA stain could potentially be dropped from future
+experiments, freeing up that channel for another marker.
 
-There are different workflows we can take to get the segmentations.
+There are different workflows for generating the training labels. Rather than manually
+annotating nuclei by hand, we use StarDist to segment nuclei on the DAPI channel and use
+these segmentations as ground truth labels paired with the corresponding phalloidin
+images.
 
-Instead of manual annotation of the nuclei we can make use of Stardist to create training data, which we can subsequent use of .
+The training data is prepared in this notebook using public data from the Image Data
+Resource:
 
-The training data is prepared in this notebook using public data on the Image Data Repository.
 - `data_collection_IDR_stardist.ipynb` — collect images from the Image Data Resource as
-  remote OME-Zarr, make nuclei labels with StarDist on the DAPI channel, check and correct
-  them in napari, and write them to `training_data/`.
+  remote OME-Zarr, generate nuclei labels with StarDist on the DAPI channel, check and
+  correct them in napari, and write them to `training_data/`.
 
-To save some time we provide you with the training data directly so you don't need to run this notebook yourself and can focus on the training aspect.
+To save time, we provide the training data directly, so you don't need to run this
+notebook yourself and can focus on the training step.
 
-Ideally you do this on a computer with a GPU. This will make that the training run will take just a few minutes to run and you can explore the different parameters that are relevant for training an optimal model.
+Ideally, training is done on a computer with a GPU, reducing training time to a few
+minutes and allowing you to explore the parameters relevant to training an optimal
+model.
 
 - `training.ipynb` — generic vs. specific models and what BiaPy can do; split
   `training_data/` into training, validation and test sets, train a model with BiaPy, and
   experiment with settings that affect training.
-- `evaluation.ipynb` — run generic StarDist and Cellpose models on the test set, put the
-  trained BiaPy model next to them, and discuss metrics: object count, IoU, precision,
-  recall, F1, and which one fits which biological question.
+- `evaluation.ipynb` — run generic StarDist and Cellpose models on the test set, place
+  the trained BiaPy model alongside them, and discuss metrics: object count, IoU,
+  precision, recall, F1, and which metric suits which biological question.
 
 ## Training data layout
 
