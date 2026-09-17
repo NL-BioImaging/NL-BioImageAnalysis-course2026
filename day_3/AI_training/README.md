@@ -1,15 +1,24 @@
 # Preparing data, training and evaluating an AI model
 
-Generic pretrained models such as StarDist and Cellpose work well when your images look
-like what they were trained on. Here we want nuclei from the actin (phalloidin) channel,
-which no generic model was trained for. So we make our own labels, train a specific model
-with BiaPy, and measure whether it beats the generic ones.
+Pretrained models such as StarDist and Cellpose work well when your images look
+like what they were trained on. However in situations where your data does look different or you want segment specific objects from your images, you can train an AI model yourself.
 
-Three notebooks, run in this order:
+In this tutorial we illustrate this by training an AI model from the actin(phalloidin) channel.
+The reason we do this is because if we train such model we could possibly exclude the DNA stainingg from subsequent experiments.
 
+There are different workflows we can take to get the segmentations.
+
+Instead of manual annotation of the nuclei we can make use of Stardist to create training data, which we can subsequent use of .
+
+The training data is prepared in this notebook using public data on the Image Data Repository.
 - `data_collection_IDR_stardist.ipynb` — collect images from the Image Data Resource as
   remote OME-Zarr, make nuclei labels with StarDist on the DAPI channel, check and correct
   them in napari, and write them to `training_data/`.
+
+To save some time we provide you with the training data directly so you don't need to run this notebook yourself and can focus on the training aspect.
+
+Ideally you do this on a computer with a GPU. This will make that the training run will take just a few minutes to run and you can explore the different parameters that are relevant for training an optimal model.
+
 - `training.ipynb` — generic vs. specific models and what BiaPy can do; split
   `training_data/` into training, validation and test sets, train a model with BiaPy, and
   experiment with settings that affect training.
@@ -17,14 +26,15 @@ Three notebooks, run in this order:
   trained BiaPy model next to them, and discuss metrics: object count, IoU, precision,
   recall, F1, and which one fits which biological question.
 
-## Data layout
+## Training data layout
 
-The preparation notebook saves one folder with matching file names:
+The preparation notebook saves one folder with matching file names
 
 ```
 training_data/
 ├── images/   # phalloidin channel, the input for the network
 └── labels/   # nuclei labels made with StarDist, the target
+└
 ```
 
 In the notebook
@@ -61,7 +71,7 @@ on day 2: conda-forge has no recent TensorFlow build for Windows.
 On Intel Macs, TensorFlow has no macOS x86 wheels after 2.16.2, so use
 `pip install "tensorflow==2.16.2"` there.
 
-### `training.ipynb`
+### `training_semantic.ipynb`
 
 BiaPy pulls in PyTorch, so it gets its own environment:
 
