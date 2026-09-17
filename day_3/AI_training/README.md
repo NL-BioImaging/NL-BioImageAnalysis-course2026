@@ -29,12 +29,16 @@ Ideally, training is done on a computer with a GPU, reducing training time to a 
 minutes and allowing you to explore the parameters relevant to training an optimal
 model.
 
-- `training.ipynb` — generic vs. specific models and what BiaPy can do; split
-  `training_data/` into training, validation and test sets, train a model with BiaPy, and
-  experiment with settings that affect training.
-- `evaluation.ipynb` — run generic StarDist and Cellpose models on the test set, place
-  the trained BiaPy model alongside them, and discuss metrics: object count, IoU,
-  precision, recall, F1, and which metric suits which biological question.
+- `training_semantic.ipynb` — the main notebook for this session (~1.5 h). Split
+  `training_data/` into training and test sets, train a first model on the foreground only,
+  read BiaPy's own curves and scores, then work out why touching nuclei end up merged, add
+  the contour channel and compare the two runs.
+
+  Scoring (object counts, IoU, precision, recall, F1) is done inside this notebook, from the
+  `test_results_metrics.csv` BiaPy writes at the end of each run.
+- `training_cellpose.ipynb` — the short alternative. Same data and same split, but instead
+  of training from scratch it fine-tunes the pretrained Cellpose-SAM model, and scores it
+  before and after.
 
 ## Training data layout
 
@@ -44,7 +48,6 @@ The preparation notebook saves one folder with matching file names
 training_data/
 ├── images/   # phalloidin channel, the input for the network
 └── labels/   # nuclei labels made with StarDist, the target
-└
 ```
 
 In the notebook
@@ -58,6 +61,9 @@ dataset/
     ├── images/
     └── labels/
 ```
+
+Note that the split cell wipes `dataset/` before it refills it, so changing the split and
+re-running cannot leave images from the previous split behind.
 
 The validation set is not a folder: BiaPy takes a fraction of the training images for it
 (`DATA.VAL.SPLIT_TRAIN`).
@@ -93,17 +99,19 @@ pip install biapy
 
 Training on a CPU is slow. Use a GPU where you can — see below.
 
-### `evaluation.ipynb`
+### `training_cellpose.ipynb`
 
-Uses the day 2 deep learning environment as it is (StarDist and Cellpose 3):
+Cellpose 4 (Cellpose-SAM) pins its own PyTorch, so it gets its own environment too:
 
 ```bash
-conda activate 2026_deep_learning
+conda create -n nlbi26-day3-cellpose -c conda-forge python=3.12 ipykernel
+conda activate nlbi26-day3-cellpose
+pip install "cellpose>=4"
 ```
 
-It does not run BiaPy; it reads the test predictions BiaPy wrote to
-`biapy_output/<job_name>/results/<job_name>_<run_id>/per_image_instances/`. These are only
-written when a training run finishes with `TEST.ENABLE: True`.
+It reads the `dataset/` split that `training_semantic.ipynb` creates, so run that notebook
+up to the end of section 2 first. Fine-tuning a transformer on a CPU is not realistic —
+this one really does want a GPU.
 
 ## Running on SURF Research Cloud
 
