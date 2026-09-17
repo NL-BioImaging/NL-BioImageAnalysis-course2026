@@ -31,9 +31,9 @@ Below, for reference, you can find what you need for the afternoon session.
     - `conda create -n jlab jupyterlab nb_conda_kernels`
         - (*nb_conda_kernels* allows JupyterLab to connect to other environments)
 - A dedicated image processing environment
-    - `conda create -n 2026_image_processing -c conda-forge scikit-image scipy seaborn matplotlib tifffile numpy imageio pandas ipykernel nbformat`
+    - `conda create -n 2026_image_processing -c conda-forge scikit-image scipy seaborn matplotlib tifffile numpy imageio pandas openpyxl ipykernel nbformat`
         - (Here, *ipykernel* is required for the environment to be visible 
-        in JupyterLab, *nbformat* is required to run one notebook from inside another notebook.)
+        in JupyterLab, *nbformat* is required to run one notebook from inside another notebook, *openpyxl* allows panda reading/writing excel files.)
 - Example images
     - Copy the `images/` folder from `day_1/image_processing/images` to your
     local Jupyter notebook folder.
