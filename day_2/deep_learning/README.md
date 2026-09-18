@@ -1,11 +1,10 @@
 # Principles of image segmentation with AI
 
 In this session we segment cells and detect spots with pretrained deep learning models.
-We do not train anything AI models ourselves, but we look at what
-these models need from us in order to work.
+We do not train anything AI models ourselves, but we look at how to use those in an image analysis workflow.
 
-The three notebooks follow the same shape: first an example image that suits the model,
-then our own images, then a few exercises.
+The three notebooks we use follow the same logic: first an example image that suits the model,
+then our own images and a few exercises.
 
 - `stardist.ipynb` — nuclei as star-convex shapes with StarDist
 - `cellpose.ipynb` — cells and nuclei from predicted flows with Cellpose
@@ -17,8 +16,7 @@ Each notebook has a matching `*_answers.ipynb` with answers to the exercises.
 
 After these notebooks you can:
 
-1. Run different pretrained deep learning models on your own images from Python, without
-   training anything yourself.
+1. Run different pretrained deep learning models on your own images from Python.
 2. Say what each of the three models predicts, and choose the one that fits your
    objects: outlines of nuclei (StarDist), outlines of cells of any shape (Cellpose),
    or positions of small spots (Spotiflow).
@@ -27,19 +25,27 @@ After these notebooks you can:
    (StarDist) or `diameter` (Cellpose).
 4. Explain why the input has to be normalized, and recognise what goes wrong when it
    is not.
-5. Judge the result yourself: overlay the labels, count the objects, compare two
-   methods, and check what you see before trusting the numbers.
-6. Combine the output of two models into a measurement (foci per nucleus), and apply it
+5. Combine the output of two models into a measurement (foci per nucleus), and apply it
    to several images with a function and a loop.
 
 ## The data
 
-The images are of cells that were either irradiated (`IR`) or left untreated
+Apart from the example data we have several iamges of cells that were either irradiated (`IR`) or left untreated
 (`control`), fixed 2 hours later, and imaged in two channels: the DNA damage foci and
 the nuclei. In the last notebook we count the foci per nucleus and compare the two
 conditions.
 
-## Requirements
+### Files in `data/`
+
+- `stardist_example1.tif` — example nuclei image from the StarDist training data
+- `hela_cells.tif` — three-channel HeLa image used in the Cellpose notebook
+
+### Files to download
+- `MAX_2h_IR_*.tif`, `MAX_2h_control_*.tif` — two-channel images of irradiated and
+  untreated cells (channel 0: DNA damage foci, channel 1: nuclei)
+   Download from: https://surfdrive.surf.nl/s/qCSnzRnTZyA2Qqk
+
+## Installation instructions
 
 - [Install](/preparation/preparation.md) JupyterLab and Conda
 - A jlab environment, which we already installed on the first day.
@@ -67,12 +73,19 @@ Notes:
 To start JupyterLab, use `conda activate jlab` and then `jupyter-lab`, and pick the
 kernel **Python [conda env:2026_deep_learning]**.
 
-## Files in `data/`
+## Running the notebooks
 
-- `stardist_example1.tif` — example nuclei image from the StarDist training data
-- `hela_cells.tif` — three-channel HeLa image used in the Cellpose notebook
+In your terminal go to the folder with the Github repository.
 
-## Files to download
-- `MAX_2h_IR_*.tif`, `MAX_2h_control_*.tif` — two-channel images of irradiated and
-  untreated cells (channel 0: DNA damage foci, channel 1: nuclei)
-   Download from: https://surfdrive.surf.nl/s/qCSnzRnTZyA2Qqk
+```
+cd NL-BioImageAnalysis-course2026
+```
+
+Then activate the `jlab` environment.
+
+```
+conda activate jlab
+jupyter lab
+```
+
+After jupyter lab has opened in your browser, go to `day2/deep_learning` open 
