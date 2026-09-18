@@ -42,12 +42,16 @@ If you now like to use your model on other data you can use a different notebook
 - Download the results
 
 ## Run on SURF research cloud
+Alternatively you can use biapy on Research Cloud.
+Access one on the desktops.
+Open JuyterLab
 
-
+A biapy notebook that works on SRC can be found in this repository.
+Clone and select the biapy kernel.
 
 ## Run biapy locally
 ```bash
 conda create -n nlbi26-day3-biapy python=3.13
 conda activate nlbi26-day3-biapy
-pip install biapy
+pip install biapy pyyaml
 ```
