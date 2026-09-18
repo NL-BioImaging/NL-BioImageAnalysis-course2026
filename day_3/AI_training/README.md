@@ -39,13 +39,15 @@ and compared before and after.
 
 ## Training data 
 
-Download ...
+Download data ...
 
 ## Running on SURF Research Cloud
 
 All environments are already installed on the workspaces. Clone this repository inside Jupyter lab
 (see [Using SURF Research Cloud](/other/ResearchCloud.md)), open the notebook and pick the
-matching kernel from the Launcher.
+matching kernel from the launcher (right top above notebook).
+
+![alt text](images/image.png)
 
 ## Environments
 
