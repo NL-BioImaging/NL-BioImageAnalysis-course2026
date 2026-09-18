@@ -18,7 +18,7 @@
         - (MW:) Addressed by itemizing differently. (I hope this is what you meant.) This section is not very mature, for **future editions** could develop this more. (Also using Bram's materials eg.)
 	- [ ] Mode doesn't always find the best background, especially with confocal data. It works well here though.
         - (MW:) Background subtraction is not my strong suite, so might be nice to chat about this later. 
-	- [ ] I don't really agree with the way the background is subtracted. By setting everything lower than the mode to 0 you alter measurements. Why not convert to floating point? (Again, in this case you probably measure only already positive numbers, so it won't be a problem, but this may not always be the case.)
+	- [X] I don't really agree with the way the background is subtracted. By setting everything lower than the mode to 0 you alter measurements. Why not convert to floating point? (Again, in this case you probably measure only already positive numbers, so it won't be a problem, but this may not always be the case.)
         - (MW:) I agree float conversion is better and data shouldn't be thrown away. I do wonder how one would make sure ratios don't end up becoming negative (that result is equally invalid as zero for this particular use case). I guess anyways division by zero is currently also possible, so both approaches need special/edge case handling.
 
 ### Part III
