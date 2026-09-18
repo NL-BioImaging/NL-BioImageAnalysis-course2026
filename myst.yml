@@ -57,7 +57,8 @@ project:
             title: Notebook - Spotiflow answers to exercises
         - title: OMERO and OME-Zarr
           file: day_2/omero/README.md
-    - file: day_3/README
+      - file: day_3/README
+        title: Day 3
     #     title: Day 3
     #   - file: day_4/README
     #     title: Day 4
