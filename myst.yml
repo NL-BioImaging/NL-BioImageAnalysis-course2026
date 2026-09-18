@@ -41,23 +41,19 @@ project:
       - file: day_2/deep_learning/README.md
         title: Day 2
         children:
-        - file: day_2/deep_learning/stardist.ipynb
+        - file: day_2/deep_learning/01_stardist.ipynb
           title: Notebook - StarDist
-        - file: day_2/deep_learning/stardist_answers.ipynb
+        - file: day_2/deep_learning/01_stardist_answers.ipynb
           title: Notebook - StarDist answers to exercises
-        - file: day_2/deep_learning/cellpose.ipynb
+        - file: day_2/deep_learning/02_cellpose.ipynb
           title: Notebook - Cellpose
-        - file: day_2/deep_learning/cellpose_answers.ipynb
+        - file: day_2/deep_learning/02_cellpose_answers.ipynb
           title: Notebook - Cellpose answers to exercises
-        - file: day_2/deep_learning/spotiflow.ipynb
+        - file: day_2/deep_learning/03_spotiflow.ipynb
           title: Notebook - Spotiflow
-        - file: day_2/deep_learning/spotiflow_answers.ipynb
+        - file: day_2/deep_learning/03_spotiflow_answers.ipynb
           title: Notebook - Spotiflow answers to exercises
-    #  - file: day_2/README
-    #     title: Day 2
-    #     children:
-    #     - file: day_2/omero/README
-    #       title: OMERO
+
     #   - file: day_3/README
     #     title: Day 3
     #   - file: day_4/README
