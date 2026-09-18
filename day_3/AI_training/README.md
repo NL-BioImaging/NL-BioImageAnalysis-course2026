@@ -39,7 +39,7 @@ and compared before and after.
 
 ## Training data 
 
-Download data ...
+Download data from: https://surfdrive.surf.nl/s/2pi8d9gzdBy8YTj
 
 ## Running on SURF Research Cloud
 
