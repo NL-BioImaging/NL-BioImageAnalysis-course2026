@@ -37,7 +37,22 @@ project:
         - file: day_1/image_processing/Image_processing_concepts_pt3.ipynb
           title: Notebook - Image processing concepts (3/3)
         - file: day_1/image_processing/Image_processing_concepts_pt3_answers.ipynb
-          title: Notebook - Image processing concepts (3/3) answers to exercises          
+          title: Notebook - Image processing concepts (3/3) answers to exercises
+      - file: day_2/deep_learning/README.md
+        title: Day 2
+        children:
+        - file: day_2/deep_learning/stardist.ipynb
+          title: Notebook - StarDist
+        - file: day_2/deep_learning/stardist_answers.ipynb
+          title: Notebook - StarDist answers to exercises
+        - file: day_2/deep_learning/cellpose.ipynb
+          title: Notebook - Cellpose
+        - file: day_2/deep_learning/cellpose_answers.ipynb
+          title: Notebook - Cellpose answers to exercises
+        - file: day_2/deep_learning/spotiflow.ipynb
+          title: Notebook - Spotiflow
+        - file: day_2/deep_learning/spotiflow_answers.ipynb
+          title: Notebook - Spotiflow answers to exercises
     #  - file: day_2/README
     #     title: Day 2
     #     children:

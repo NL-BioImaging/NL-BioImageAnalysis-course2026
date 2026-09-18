@@ -1,0 +1,19 @@
+[workspace]
+authors = ["Maarten Paul <maarten.paul@gmail.com>"]
+channels = ["conda-forge"]
+name = "deep_learning"
+platforms = ["linux-64","win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+ipykernel = ">=7.3.0,<8"
+
+[pypi-dependencies]
+spotiflow = ">=0.6.5, <0.7"
+stardist = ">=0.9.2, <0.10"
+tensorflow = ">=2.21.0, <3"
+cellpose = "<4"
+anybioimage = ">=0.3.1, <0.4"
