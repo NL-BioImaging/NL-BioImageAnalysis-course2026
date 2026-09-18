@@ -1,7 +1,7 @@
 
 ## Remarks Day 1: Jupyter Notebooks Martijn
 
-General
+### General
 
 - [ ] Add links to the (API reference) websites of skimage, scipy etc. E.g. https://scikit-image.org/docs/stable/api/api.html, or https://docs.scipy.org/doc/scipy/reference/ndimage.html
 
