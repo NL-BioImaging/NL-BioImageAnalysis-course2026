@@ -9,7 +9,7 @@ The materials can be read as Jupyter book at:
 https://nl-bioimaging.github.io/NL-BioImageAnalysis-course2026/
 
 ## Getting started
-Check out hte preparation documentation for the course [here](preparation/preparation.md).
+Check out the preparation documentation for the course [here](preparation/preparation.md).
 If you already have git and conda installed.
 
 ```

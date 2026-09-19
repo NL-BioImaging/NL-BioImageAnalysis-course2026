@@ -1,4 +1,4 @@
-# Principles of image segmentation with AI
+# Deep learning for image analysis
 
 In this session we segment cells and detect spots with pretrained deep learning models.
 We do not train any AI models ourselves, but we look at how to use those in an image analysis workflow.

@@ -18,7 +18,7 @@ project:
   github: https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
-    - file: README
+    - file: index.md
     - title: Preparation
       file: preparation/preparation.md
     - title: Program
@@ -39,32 +39,30 @@ project:
         - file: day_1/image_processing/Image_processing_concepts_pt3_answers.ipynb
           title: Notebook - Image processing concepts (3/3) answers to exercises
       - title: Day 2
+        file: day_2/README
         children:
+        - title: OMERO and OME-Zarr
+          file: day_2/omero/README.md
         - title: Deep learning for image analysis
           file: day_2/deep_learning/README.md
           children:
           - file: day_2/deep_learning/01_stardist.ipynb
-            title: Notebook - StarDist
+            title: StarDist
           - file: day_2/deep_learning/01_stardist_answers.ipynb
-            title: Notebook - StarDist answers to exercises
+            title: StarDist answers to exercises
           - file: day_2/deep_learning/02_cellpose.ipynb
-            title: Notebook - Cellpose
+            title: Cellpose
           - file: day_2/deep_learning/02_cellpose_answers.ipynb
-            title: Notebook - Cellpose answers to exercises
+            title: Cellpose answers to exercises
           - file: day_2/deep_learning/03_spotiflow.ipynb
-            title: Notebook - Spotiflow
+            title: Spotiflow
           - file: day_2/deep_learning/03_spotiflow_answers.ipynb
-            title: Notebook - Spotiflow answers to exercises
-        - title: OMERO and OME-Zarr
-          file: day_2/omero/README.md
+            title: Spotiflow answers to exercises
       - file: day_3/README
         title: Day 3
-    #     title: Day 3
-    #   - file: day_4/README
-    #     title: Day 4
-    #- title: Other
-    #  file: other/ResearchCloud.md
-
+      - file: day_4/README
+        title: Day 4
+    
 site:
   template: book-theme
   options:
@@ -72,6 +70,7 @@ site:
     logo: images/nlbio.jpg
     logo_text: "NL-BioImaging Advanced Image Analysis Course 2026"
     style: book/custom-style.css
+    folders: true
     # Readers keep the light/dark toggle; book/custom-style.css themes
     # both modes. book-theme has no option for the default mode, so the
     # deploy workflow (.github/workflows/deploy.yml) patches it to light.
