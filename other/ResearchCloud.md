@@ -47,17 +47,11 @@ For a smoother experience you could setup to connect with a Remote Desktop clien
 
 ### Transfer data
 
-1. **Course data** is already on the workspace. You don't need to copy anything in.
-2. **To take your results home**, open the browser on the desktop and upload them to SURFdrive or a similar cloud storage service. Download them from there on your own computer.
-
-Optional, if you want to set it up yourself:
-
-3. Copy files over SFTP with [Cyberduck](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/112592488/Upload+data+to+a+workspace+with+Cyberduck).
-4. [Connect Research Drive](https://servicedesk.surf.nl/wiki/display/WIKI/Connect+Research+Drive) as persistent storage on the workspace.
+The course data is already on the workspace. To take your results home, open the browser on the desktop and send them to yourself with [SURF Filesender](https://filesender.surf.nl). You receive a download link by email.
 
 ## 3. JupyterLab
 
-Besides the desktop, you can also work in JupyterLab. It runs on the desktop workspace too, or on a separate Jupyter workspace. It works the same way in both cases.
+Besides the desktop, you can also work in JupyterLab. It runs on the desktop workspace too, or on a separate Jupyter workspace.
 
 - **Desktop workspace:** start JupyterLab from its icon on the desktop. It opens in the desktop's browser and runs inside the desktop.
 - **Jupyter workspace:** JupyterLab opens directly in your own browser.
