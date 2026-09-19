@@ -1,6 +1,6 @@
 # Program
 
-## Image annotation w
+## Image annotation with napari
 
 Hands on session by Johannes Franz
 
