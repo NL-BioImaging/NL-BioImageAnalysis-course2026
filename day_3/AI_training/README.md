@@ -15,10 +15,10 @@ annotating nuclei by hand, we use StarDist to segment nuclei on the DAPI channel
 these segmentations as ground truth labels paired with the corresponding phalloidin
 images.
 
-![StarDist nuclei segmentation on the DAPI channel](images/stardist_dapi.png)
+![StarDist nuclei segmentation on the DAPI channel](images/stardist_dapi.png)    
 *StarDist on the DAPI channel gives the labels.*
 
-![Phalloidin image and its nuclei labels](images/phalloidin_labels.png)
+![Phalloidin image and its nuclei labels](images/phalloidin_labels.png)   
 *The training pair: the phalloidin channel as input, the StarDist nuclei as target.*
 
 ## Learning goals
