@@ -15,11 +15,19 @@ annotating nuclei by hand, we use StarDist to segment nuclei on the DAPI channel
 these segmentations as ground truth labels paired with the corresponding phalloidin
 images.
 
-![StarDist nuclei segmentation on the DAPI channel](images/stardist_dapi.png)    
-*StarDist on the DAPI channel gives the labels.*
+:::{figure} images/stardist_dapi.png
+:alt: StarDist nuclei segmentation on the DAPI channel
+:width: 100%
 
-![Phalloidin image and its nuclei labels](images/phalloidin_labels.png)   
-*The training pair: the phalloidin channel as input, the StarDist nuclei as target.*
+StarDist on the DAPI channel gives the labels.
+:::
+
+:::{figure} images/phalloidin_labels.png
+:alt: Phalloidin image and its nuclei labels
+:width: 100%
+
+The training pair: the phalloidin channel as input, the StarDist nuclei as target.
+:::
 
 ## Learning goals
 
@@ -96,7 +104,10 @@ All environments are already installed on the workspaces. Clone this repository 
 (see [Using SURF Research Cloud](/other/ResearchCloud.md)), open the notebook and pick the
 matching kernel from the launcher (right top above notebook).
 
-![alt text](images/image.png)
+:::{image} images/image.png
+:alt: Selecting the kernel in JupyterLab
+:width: 500px
+:::
 
 ## Environments
 
