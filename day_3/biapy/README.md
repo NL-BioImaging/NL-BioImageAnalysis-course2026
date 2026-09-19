@@ -20,10 +20,6 @@ You will need a Google account to run this notebooks. Alternatively you can make
 
 - Define parameters
 
--> Fix: `biapy = BiaPy(f'/content/{job_name}.yaml', result_dir=output_path, name=job_name, run_id=1, gpu="0") (same issue at the inference nb lower)`
-
-biapy_config['TRAIN']['VERBOSE'] = True
-
 - Start training
 
 - Check the results of the training
@@ -42,12 +38,17 @@ If you now like to use your model on other data you can use a different notebook
 - Download the results
 
 ## Run on SURF research cloud
+Alternatively you can use biapy on Research Cloud.
+Access one on the desktops.
+Open JuyterLab
 
-
+A biapy notebook that works on SRC can be found in this repository.
+Clone and select the biapy kernel.
 
 ## Run biapy locally
 ```bash
 conda create -n nlbi26-day3-biapy python=3.13
 conda activate nlbi26-day3-biapy
-pip install biapy
+pip install "biapy>=3.7.1" pyyaml gdown ipywidgets matplotlib
 ```
+Then open [BiaPy_instance_segmentation.ipynb](BiaPy_instance_segmentation.ipynb) in JupyterLab with this environment as kernel.

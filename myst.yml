@@ -62,6 +62,19 @@ project:
         title: Day 3
         children:
         - file: other/ResearchCloud
+        - title: BiaPy
+          file: day_3/biapy/README.md
+        - title: Preparing data and training an AI model
+          file: day_3/AI_training/README.md
+          children:
+          - file: day_3/AI_training/00_data_collection_stardist.ipynb
+            title: Collecting training data from IDR
+          - file: day_3/AI_training/01_training_instance_segmentation.ipynb
+            title: Training instance segmentation with BiaPy
+          - file: day_3/AI_training/02_training_image_to_image.ipynb
+            title: Training image-to-image with BiaPy
+          - file: day_3/AI_training/03_training_cellpose.ipynb
+            title: Fine-tuning Cellpose-SAM
       - file: day_4/README
         title: Day 4
     
