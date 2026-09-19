@@ -7,11 +7,7 @@ authors: [mwehrens, clewis]
 
 ##  Morning: Introduction to Python and Jupyter notebooks
 
-(..)
-
-### Additional resources
-
-(..)
+*Lecture by Chris.*
 
 ##  Afternoon: Image processing concepts with Python
 
@@ -38,7 +34,23 @@ Below, for reference, you can find what you need for the afternoon session.
     - Copy the `images/` folder from `day_1/image_processing/images` to your
     local Jupyter notebook folder.
 
-To start JupyterLab, first use the command `conda activate jlab` and then `jupyter-lab`.
+<!--To start JupyterLab, open your terminal, 
+navigate to the directory with your scripts using `cd /path/to/your/scripts/`,
+then
+use the commands `conda activate jlab` and `jupyter-lab`.-->
+
+### Starting JupyterLab
+
+- open a terminal
+    - (on macOS/Linux: your regular terminal)
+    - (on Windows: use the Anaconda Prompt)
+- navigate to the directory with your scripts using `cd`
+    - macOS/Linux: `cd /path/to/your/scripts/`, 
+    - Windows: `cd C:\path\to\your\scripts` 
+        - (add `/d` if the folder is on another drive, e.g. `cd /d D:\scripts`)
+- use the commands 
+    - `conda activate jlab` 
+    - `jupyter-lab`.
 
 ### Content overview
 
