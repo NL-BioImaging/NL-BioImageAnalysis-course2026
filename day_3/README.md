@@ -19,6 +19,8 @@ Documentation: https://biapy.readthedocs.io/en/latest/
 
 ## Preparing data and fine-tuning an AI model
 
+Hands-on session: train a model that segments nuclei from the actin channel, using public
+data from the Image Data Resource. See [AI_training](AI_training/README.md).
 
 
 ### Additional resources
