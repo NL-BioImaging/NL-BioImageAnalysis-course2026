@@ -20,10 +20,6 @@ You will need a Google account to run this notebooks. Alternatively you can make
 
 - Define parameters
 
--> Fix: `biapy = BiaPy(f'/content/{job_name}.yaml', result_dir=output_path, name=job_name, run_id=1, gpu="0") (same issue at the inference nb lower)`
-
-biapy_config['TRAIN']['VERBOSE'] = True
-
 - Start training
 
 - Check the results of the training
