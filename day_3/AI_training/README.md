@@ -133,8 +133,6 @@ python -c 'import torch; print(torch.cuda.is_available())'
 >>> True
 ```
 
-Training on a CPU is slow. Use a GPU where you can see below.
-
 ### `03_training_cellpose.ipynb`
 
 Cellpose 4 (Cellpose-SAM) requires a specific version of PyTorch, so it needs its own environment too:
