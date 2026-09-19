@@ -1,16 +1,16 @@
 # Principles of image segmentation with AI
 
 In this session we segment cells and detect spots with pretrained deep learning models.
-We do not train anything AI models ourselves, but we look at how to use those in an image analysis workflow.
+We do not train any AI models ourselves, but we look at how to use those in an image analysis workflow.
 
 The three notebooks we use follow the same logic: first an example image that suits the model,
 then our own images and a few exercises.
 
-- `stardist.ipynb` — nuclei as star-convex shapes with StarDist
-- `cellpose.ipynb` — cells and nuclei from predicted flows with Cellpose
-- `spotiflow.ipynb` — spots as coordinates with Spotiflow, combined with the nuclei
+- `01_stardist.ipynb` — nuclei as star-convex shapes with StarDist
+- `02_cellpose.ipynb` — cells and nuclei from predicted flows with Cellpose
+- `03_spotiflow.ipynb` — spots as coordinates with Spotiflow, combined with the nuclei
 
-Each notebook has a matching `*_answers.ipynb` with answers to the exercises.
+Each notebook has a matching `_answers.ipynb` with answers to the exercises.
 
 ## Learning goals
 
@@ -30,7 +30,7 @@ After these notebooks you can:
 
 ## The data
 
-Apart from the example data we have several iamges of cells that were either irradiated (`IR`) or left untreated
+Apart from the example data we have several images of cells that were either irradiated (`IR`) or left untreated
 (`control`), fixed 2 hours later, and imaged in two channels: the DNA damage foci and
 the nuclei. In the last notebook we count the foci per nucleus and compare the two
 conditions.
@@ -55,11 +55,11 @@ conditions.
 ```bash
 conda create -n 2026_deep_learning -c conda-forge python=3.12 ipykernel nbformat pip
 conda activate 2026_deep_learning
-pip install "tensorflow>=2.16,<2.22" stardist "cellpose<4" spotiflow numpy matplotlib tifffile scikit-image pandas seaborn
+pip install "tensorflow>=2.16,<2.22" stardist "cellpose<4" spotiflow numpy matplotlib tifffile scikit-image pandas
 ```
 
 The deep learning packages come from `pip` rather than conda-forge: conda-forge
-has no recent TensorFlow build for Windows, and no currently no Spotiflow package.
+has no recent TensorFlow build for Windows, and currently no Spotiflow package.
 
 Notes:
 
@@ -88,4 +88,4 @@ conda activate jlab
 jupyter lab
 ```
 
-After jupyter lab has opened in your browser, go to `day2/deep_learning` open 
+After jupyter lab has opened in your browser, go to `day_2/deep_learning` open the first notebook `01_stardist.ipynb`.
