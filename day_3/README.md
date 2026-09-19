@@ -1,6 +1,8 @@
 # Program
 
-## Image annotation with napari
+## Image annotation w
+
+Hands on session by Johannes Franz
 
 ### Additional resources
 Bioimage Analysis with Napari - https://www.fabriziomusacchio.com/teaching/teaching_bioimage_analysis/
@@ -8,7 +10,7 @@ Bioimage Analysis with Napari - https://www.fabriziomusacchio.com/teaching/teach
 
 ## Biapy - accessible deep learning for bioimage analysis
 
-Lecture by Daniel Franco-Barranco 
+Lecture by [Daniel Franco-Barranco ](https://danifranco.github.io/)
 
 Followed by hands-on using 'code-free' [BiaPy notebooks](https://biapyx.github.io/) on Google Colab
 

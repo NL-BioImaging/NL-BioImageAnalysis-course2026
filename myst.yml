@@ -60,6 +60,8 @@ project:
             title: Spotiflow answers to exercises
       - file: day_3/README
         title: Day 3
+        children:
+        - file: other/ResearchCloud
       - file: day_4/README
         title: Day 4
     

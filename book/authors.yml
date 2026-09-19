@@ -15,7 +15,7 @@ project:
     - id: mpaul
       name: Maarten Paul
       github: maartenpaul
-      # orcid: 0000-0000-0000-0000
+      orcid: 0000-0002-7990-6010
       # email: ...
       affiliations:
         - lumc

@@ -6,7 +6,7 @@ authors: [mpaul]
 
 [SURF Research Cloud](https://www.surf.nl/en/services/compute/surf-research-cloud) (SRC) lets you run a *workspace*: a virtual machine with a defined hardware configuration and tools preinstalled. For image analysis this means you can get a machine with an NVIDIA GPU, ready for AI-based tools, without installing anything yourself.
 
-This tutorial describes how to work on an existing workspace. If you want to learn how to create your own, see the [SRC documentation](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/9798172/SURF+Research+Cloud).
+These instructions describe how to work on an existing workspace. If you want to learn how to create your own, see the [SRC documentation](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/9798172/SURF+Research+Cloud).
 
 ## 1. Access your workspace
 
@@ -42,14 +42,27 @@ To copy and paste text between your own computer and the desktop, press <kbd>Ctr
 ![StarDist segmentation in napari](images/napari-stardist.png)
 
 :::{note}
-For a smoother experience you can connect with a Remote Desktop client instead of the browser (Windows: *Remote Desktop Connection*, Linux: *Remmina*). This requires a one-time password, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854429/Workspace+access+with+TOTP#WorkspaceaccesswithTOTP-UbuntuDesktopwithTOTP).
+For a smoother experience you could setup to connect with a Remote Desktop client instead of the browser (Windows: *Remote Desktop Connection*, Linux: *Remmina*). This requires a one-time password, see [Workspace access with TOTP](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/195854429/Workspace+access+with+TOTP#WorkspaceaccesswithTOTP-UbuntuDesktopwithTOTP).
 :::
+
+### Transfer data
+
+1. **Course data** is already on the workspace. You don't need to copy anything in.
+2. **To take your results home**, open the browser on the desktop and upload them to SURFdrive or a similar cloud storage service. Download them from there on your own computer.
+
+Optional, if you want to set it up yourself:
+
+3. Copy files over SFTP with [Cyberduck](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/112592488/Upload+data+to+a+workspace+with+Cyberduck).
+4. [Connect Research Drive](https://servicedesk.surf.nl/wiki/display/WIKI/Connect+Research+Drive) as persistent storage on the workspace.
 
 ## 3. JupyterLab
 
-Besides the desktop, you can also work in JupyterLab directly in your browser. It runs on the desktop workspace too, or on a separate Jupyter workspace. It works the same way in both cases.
+Besides the desktop, you can also work in JupyterLab. It runs on the desktop workspace too, or on a separate Jupyter workspace. It works the same way in both cases.
 
-JupyterLab comes with several Python environments preinstalled, one per tool (biapy, cellpose, micro_sam, stardist, …). They show up as tiles in the **Launcher**. On a desktop workspace the Launcher also has a **Desktop** tile, which opens the desktop in a new browser tab.
+- **Desktop workspace:** start JupyterLab from its icon on the desktop. It opens in the desktop's browser and runs inside the desktop.
+- **Jupyter workspace:** JupyterLab opens directly in your own browser.
+
+JupyterLab comes with several Python environments preinstalled, one per tool (biapy, cellpose, micro_sam, stardist, …). They show up as tiles in the **Launcher**.
 
 ![JupyterLab Launcher with the preinstalled environments](images/jupyter.png)
 
@@ -72,7 +85,7 @@ cd ~
 git clone https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026
 ```
 
-A folder `NL-BioImageAnalysis-course2026` now appears in the file browser on the left (press the refresh button if it doesn't).
+A folder `NL-BioImageAnalysis-course2026` now appears in the Jupyter file browser on the left (press the refresh button if it doesn't).
 
 ### Pick an environment
 
@@ -83,9 +96,11 @@ Open a notebook and select the environment (*kernel*) for the tool you want to u
 :width: 250px
 :::
 
-### Transfer data
+### Jupyter workspace only
 
-To copy files to the workspace, drag them onto the file browser or use the upload button (arrow icon) at the top of it. To copy a file back to your own computer, right-click it in the file browser and choose *Download*. This is convenient for small files.
+The Launcher also has a **Desktop** tile, which opens the desktop in a new browser tab.
+
+**Transfer data.** To copy files to the workspace, drag them onto the file browser or use the upload button (arrow icon) at the top of it. To copy a file back to your own computer, right-click it in the file browser and choose *Download*. This is convenient for small files.
 
 ### Install your own conda environment
 

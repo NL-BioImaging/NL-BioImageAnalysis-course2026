@@ -9,3 +9,6 @@ https://fractal-analytics-platform.github.io/
 #  Generative AI for developing image analysis workflows
 
 ### Additional resources
+
+
+# Data challenge: work on your own data
