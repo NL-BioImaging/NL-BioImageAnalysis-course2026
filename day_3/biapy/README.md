@@ -53,5 +53,6 @@ Clone and select the biapy kernel.
 ```bash
 conda create -n nlbi26-day3-biapy python=3.13
 conda activate nlbi26-day3-biapy
-pip install biapy pyyaml
+pip install "biapy>=3.7.1" pyyaml gdown ipywidgets matplotlib
 ```
+Then open [BiaPy_instance_segmentation.ipynb](BiaPy_instance_segmentation.ipynb) in JupyterLab with this environment as kernel.
