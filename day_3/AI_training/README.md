@@ -65,7 +65,8 @@ model.
 ## Training data
 
 Download data from: https://surfdrive.surf.nl/s/2pi8d9gzdBy8YTj and unzip it next to the
-notebooks, so you have `training_data/images/` and `training_data/labels/`.
+notebooks, so you have `training_data/images/` (phalloidin), `training_data/labels/` (nuclei
+labels) and `training_data/nuclei/` (DAPI, used in `02_training_image_to_image.ipynb`).
 
 The images come from IDR screen 1952 (idr0036), a Cell Painting experiment in U2OS cells,
 published under CC0: Gustafsdottir et al. (2013) Multiplex cytological profiling assay to
@@ -141,7 +142,7 @@ Cellpose 4 (Cellpose-SAM) requires a specific version of PyTorch, so it needs it
 ```bash
 conda create -n nlbi26-day3-cellpose -c conda-forge python=3.12 ipykernel
 conda activate nlbi26-day3-cellpose
-pip install "cellpose>=4"
+pip install "cellpose>=4" pandas matplotlib scikit-image
 ```
 
 It reads the `dataset/` folder you build in `01_training_instance_segmentation.ipynb`
