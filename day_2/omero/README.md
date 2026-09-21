@@ -33,7 +33,7 @@ conda activate nlbi26-day2-omero
 pip install ezomero ngff-zarr
 ```
 
-Activate the conda environment with jupyter lab you already installed  during the [preparation](../../preparation/preparation.md).
+Activate the conda environment with jupyter lab you already installed named `jlab` during the [preparation](../../preparation/preparation.md).
 
 ```
 conda activate jlab
@@ -41,19 +41,6 @@ jupyter-lab
 ```
 
 Open `omero.ipynb` in Jupyter lab.
-
-## Running Jupyter lab
-Go to this folder
-```
-cd NL-BioImageAnalysis-course2026/day_2/omero
-```
-On the command line go to the github 
-```
-conda activate nlbi26-day2-omero
-jupyter lab
-```
-Open `omero.ipynb`
-
 
 ### Useful documentation
 ezomero documentation - https://thejacksonlaboratory.github.io/ezomero/index.html
