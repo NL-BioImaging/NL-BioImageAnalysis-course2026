@@ -55,7 +55,7 @@ conditions.
 ```bash
 conda create -n 2026_deep_learning -c conda-forge python=3.12 ipykernel nbformat pip
 conda activate 2026_deep_learning
-pip install "tensorflow>=2.16,<2.22" stardist "cellpose<4" spotiflow numpy matplotlib tifffile scikit-image pandas
+pip install "tensorflow>=2.16,<2.22" stardist "cellpose<4" spotiflow numpy matplotlib tifffile scikit-image pandas colorcet
 ```
 
 The deep learning packages come from `pip` rather than conda-forge: conda-forge
