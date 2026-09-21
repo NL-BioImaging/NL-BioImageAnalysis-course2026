@@ -36,4 +36,5 @@ git clone https://github.com/NL-BioImaging/NL-BioImageAnalysis-course2026.git
 - Data challenge and flash presentations
 
 ## License
-The content of this course is licensed as [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) by the contributors unless mentioned otherwise.
+The course content (text, notebooks, images) is licensed as [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) by the contributors unless mentioned otherwise.
+Code (scripts, code cells) is licensed under the [BSD 3-Clause License](LICENSE-CODE).
