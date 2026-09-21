@@ -32,4 +32,5 @@ uv run jupyter book start
 ```
 
 ## License
-The content of this repository is licensed as [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) by the contributors of this repository unless mentioned otherwise.
+The course content (text, notebooks, images) in this repository is licensed as [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) by the contributors of this repository unless mentioned otherwise.
+Code (scripts, code cells) is licensed under the [BSD 3-Clause License](LICENSE-CODE).
