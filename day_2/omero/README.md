@@ -6,7 +6,7 @@
 
 First we create a new conda environment.
 ```
-conda create -n nlbi26-day2-omero python=3.12 ipykernel omero-py numpy tifffile scipy scikit-image imageio pandas matplotlib seaborn 
+conda create -n nlbi26-day2-omero python=3.12 ipykernel numpy tifffile scipy scikit-image imageio pandas matplotlib seaborn 
 ```
 
 Activate the environment
