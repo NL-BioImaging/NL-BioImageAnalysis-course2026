@@ -28,23 +28,6 @@ After these notebooks you can:
 5. Combine the output of two models into a measurement (foci per nucleus), and apply it
    to several images with a function and a loop.
 
-## The data
-
-Apart from the example data we have several images of cells that were either irradiated (`IR`) or left untreated
-(`control`), fixed 2 hours later, and imaged in two channels: the DNA damage foci and
-the nuclei. In the last notebook we count the foci per nucleus and compare the two
-conditions.
-
-### Files in `data/`
-
-- `stardist_example1.tif` — example nuclei image from the StarDist training data
-- `hela_cells.tif` — three-channel HeLa image used in the Cellpose notebook
-
-### Files to download
-- `MAX_2h_IR_*.tif`, `MAX_2h_control_*.tif` — two-channel images of irradiated and
-  untreated cells (channel 0: DNA damage foci, channel 1: nuclei)
-   Download from: https://surfdrive.surf.nl/s/qCSnzRnTZyA2Qqk
-
 ## Installation instructions
 
 - [Install](/preparation/preparation.md) JupyterLab and Conda
@@ -72,6 +55,25 @@ Notes:
 
 To start JupyterLab, use `conda activate jlab` and then `jupyter-lab`, and pick the
 kernel **Python [conda env:2026_deep_learning]**.
+
+## The data
+
+Apart from the example data we have several images of cells that were either irradiated (`IR`) or left untreated
+(`control`), fixed 2 hours later, and imaged in two channels: the DNA damage foci and
+the nuclei. In the last notebook we count the foci per nucleus and compare the two
+conditions.
+
+### Files in `data/`
+
+- `stardist_example1.tif` — example nuclei image from the StarDist training data
+- `hela_cells.tif` — three-channel HeLa image used in the Cellpose notebook
+
+### Files to download
+- `MAX_2h_IR_*.tif`, `MAX_2h_control_*.tif` — two-channel images of irradiated and
+  untreated cells (channel 0: DNA damage foci, channel 1: nuclei)
+   Download from: https://surfdrive.surf.nl/s/qCSnzRnTZyA2Qqk
+
+
 
 ## Running the notebooks
 
