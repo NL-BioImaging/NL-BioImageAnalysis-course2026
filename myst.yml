@@ -41,8 +41,10 @@ project:
       - title: Day 2
         file: day_2/README
         children:
-        - title: OMERO and OME-Zarr
+        - title: OMERO
           file: day_2/omero/README.md
+          children:
+          - file: day_2/omero/extra_work       
         - title: Deep learning for image analysis
           file: day_2/deep_learning/README.md
           children:

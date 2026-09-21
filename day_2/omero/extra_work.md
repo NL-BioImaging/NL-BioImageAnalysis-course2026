@@ -1,6 +1,6 @@
-## Extra work on OMERO
+# Extra work on OMERO
 
-Material adapted from the Leiden University OMERO workshop manual - Joost Willemse, Maarten Paul
+*Material adapted from the Leiden University OMERO workshop manual - Joost Willemse, Maarten Paul*
 
 With this extra material you can work with your own data, further explore OMERO.web, and test the FIJI plugin for OMERO.
 During the course we make use of an OMERO instances hosted at SURF - https://omero1.fair-omero-lu.src.surf-hosted.nl/
@@ -13,7 +13,7 @@ This excercise consist of three parts:
 You do not necessarily need to follow this order. If you want to use pre-existing data, you can skip part 1 and continue with part 2 and/or 3.
 If you want to upload new data, please restrict this to 10 GB.
 
-### Part 1: Import data in OMERO
+## Part 1: Import data in OMERO
 
 1. If you want to upload data from your own computer or need to download large datasets you need OMERO.insight - https://www.openmicroscopy.org/omero/downloads/
 2. Download it an install it.
@@ -90,7 +90,7 @@ Press the **MDE** button, next to Import
 18. Here you can add tags that you have added before, or create new ones (at the bottom)
 19. Finally click the import button and all your images will be uploaded
 
-### Part 2: Simple measurements using OMERO-plugin in FIJI
+## Part 2: Simple measurements using OMERO-plugin in FIJI
 
 If you have not installed FIJI yet, go to https://fiji.sc to download the latest version. OMERO.insight needs to be installed. Follow steps 1-6, step 3 optional, from part 1 if you did not do this yet.
 
@@ -119,7 +119,7 @@ Let’s make a simple measurement: measure the length of zebrafish larvae
 16. Once opened you can go to the ROIs tab and display the ROI you have created.
 17. In addition, you can find your measurement as attachment to the image
 
-### Part 3: Create publication figures using OMERO.figure
+## Part 3: Create publication figures using OMERO.figure
 
 OMERO.web has a nice feature, called OMERO.figure. You can open one or multiple images from OMERO with OMERO.figure and create your own publication ready figure and export it as a pdf, tiff or png file. The images in this file are also linked to the images used in OMERO, so you can easily find back the original image if you need to make changes to your figure. In this exercise we will create a multi-panel figure that can serve in a PowerPoint for presenting the data to your group/supervisor or for a publication. 
 
