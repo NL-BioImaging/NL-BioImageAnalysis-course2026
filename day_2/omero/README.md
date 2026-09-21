@@ -3,20 +3,24 @@
 ## Conda
 
 ### Windows
+
+First we create a new conda environment.
 ```
 conda create -n nlbi26-day2-omero python=3.12 ipykernel omero-py numpy tifffile scipy scikit-image imageio pandas matplotlib seaborn 
 ```
 
+Activate the environment
 ```
 conda activate nlbi26-day2-omero
 ```
 
+A few packages is not available on conda so we need to install with pip.
 ```
 pip install https://github.com/glencoesoftware/zeroc-ice-py-win-x86_64/releases/download/20240325/zeroc_ice-3.6.5-cp312-cp312-win_amd64.whl
 pip install omero-py ezomero ngff-zarr
 ```
 
-### Linux
+### Linux/Mac
 ```
 conda create -n nlbi26-day2-omero python=3.12 ipykernel omero-py numpy tifffile scipy scikit-image imageio pandas matplotlib seaborn omero-py zeroc-ice
 ```
