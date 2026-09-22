@@ -47,13 +47,13 @@ For a smoother experience you could setup to connect with a Remote Desktop clien
 
 ### Transfer data
 
-The course data is already on the workspace. To take your results home, open the browser on the desktop and send them to yourself with [SURF Filesender](https://filesender.surf.nl). You receive a download link by email.
+To take your results home, the easiest is to open the browser on the desktop and send them to yourself with [SURF Filesender](https://filesender.surf.nl).
 
 ## 3. JupyterLab
 
 Besides the desktop, you can also work in JupyterLab. It runs on the desktop workspace too, or on a separate Jupyter workspace.
 
-- **Desktop workspace:** start JupyterLab from its icon on the desktop. It opens in the desktop's browser and runs inside the desktop.
+- **Desktop workspace:** start JupyterLab from its icon on the desktop. It opens in the desktop's browser and runs inside the desktop. 
 - **Jupyter workspace:** JupyterLab opens directly in your own browser.
 
 JupyterLab comes with several Python environments preinstalled, one per tool (biapy, cellpose, micro_sam, stardist, …). They show up as tiles in the **Launcher**.
