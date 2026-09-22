@@ -37,7 +37,11 @@ After these notebooks you can:
 
 ```bash
 conda create -n 2026_deep_learning -c conda-forge python=3.12 ipykernel nbformat pip
+```
+```bash
 conda activate 2026_deep_learning
+```
+```bash
 pip install "tensorflow>=2.16,<2.22" stardist "cellpose<4" spotiflow numpy matplotlib tifffile scikit-image pandas colorcet
 ```
 
