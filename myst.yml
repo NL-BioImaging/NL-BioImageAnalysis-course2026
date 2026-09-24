@@ -64,6 +64,15 @@ project:
         title: Day 3
         children:
         - file: other/ResearchCloud
+        - name: "napari"
+          file: day_3/napari/napari.ipynb
+          children:
+          - file: day_3/napari/00_napari_basics.ipynb
+            title: napari basics
+          - file: day_3/napari/01_napari_segmentation.ipynb
+            title: napari segmentation
+          - file: day_3/napari/02_napari_analysis.ipynb
+            title: napari analysis
         - title: BiaPy
           file: day_3/biapy/README.md
         - title: Preparing data and training an AI model
